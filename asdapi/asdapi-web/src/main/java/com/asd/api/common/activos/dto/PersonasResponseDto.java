@@ -41,4 +41,5 @@ public class PersonasResponseDto {
     public void setResult(ResultDto result) {
         this.result = result;
     }
+    
 }
