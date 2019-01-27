@@ -6,6 +6,7 @@
 package com.asd.api.ejb.activos;
  
 import com.asd.api.common.activos.dto.ActivosResponseDto;
+import java.util.Date;
 import javax.ejb.Local;
  
  
@@ -21,5 +22,29 @@ public interface ActivosBeanLocal {
      * Funcion que extrae listado completo de activos
      * @return ActivosResponseDto
      */
-    public ActivosResponseDto obtenerActivos();  
+    public ActivosResponseDto obtenerActivos(); 
+    
+        /**
+     * Funcion que obtiene un activo por setial
+     * @param serial
+     * @return ActivosResponseDto
+     */
+    public ActivosResponseDto obtenerActivosSerial(String serial);
+ 
+    
+    /**
+     * Funcion que obtiene un activos por tipo
+     * @param tipo
+     * @return ActivosResponseDto
+     */
+    public ActivosResponseDto obtenerActivosIdTipo(Integer tipo);
+ 
+    
+    /**
+     * Funcion que obtiene un activos por fecha de compra
+     * @param tipo
+     * @return ActivosResponseDto
+     */
+    public ActivosResponseDto obtenerActivosFechaCompra(Date tipo);
+    
 }
