@@ -17,8 +17,6 @@ import com.asd.api.persistencia.entidades.Tipo;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.ejb.EJB;
 import javax.ejb.EJBException;
 import javax.enterprise.context.RequestScoped;
@@ -33,6 +31,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
+import org.slf4j.LoggerFactory; 
 
 /**
  * Clase que implementa front de servicios web
@@ -44,7 +43,8 @@ import javax.ws.rs.core.MediaType;
 @RequestScoped
 public class ServicioActivos {
 
-    private static final Logger LOGGER = Logger.getLogger(ServicioActivos.class.getName());
+    //private static final Logger LOGGER = Logger.getLogger(ServicioActivos.class.getName()); 
+    private final org.slf4j.Logger LOGGER = LoggerFactory.getLogger(ServicioActivos.class); 
 
     @Context
     private HttpServletResponse httpServletResponse;
@@ -85,7 +85,7 @@ public class ServicioActivos {
         try {
             httpServletResponse.flushBuffer();
         } catch (Exception e) {
-            LOGGER.log(Level.SEVERE, "Error al establecer repuesta {0}", e);
+            LOGGER.error( "Error al establecer repuesta {0}", e);
         }
     }
 
@@ -274,14 +274,14 @@ public class ServicioActivos {
             estableceRespuesta(ConstantesAplicacion.MISSING_DATA_CODE);
             return activosResponseDto;
         } catch (ConstraintViolationException ev) {
-            LOGGER.log(Level.SEVERE, "Error en parametros enviados parametros imcompletos {0}", ev);
+            LOGGER.error("Error en parametros enviados parametros imcompletos " + ev); 
             ActivosResponseDto activosResponseDto = new ActivosResponseDto();
             activosResponseDto.setResult(new ResultDto(ConstantesAplicacion.MISSING_DATA_CODE, "Error en parametros enviados parametros imcompletos " + ev.getMessage()));
             estableceRespuesta(ConstantesAplicacion.MISSING_DATA_CODE);
             return activosResponseDto;
 
         } catch (Exception e) {
-            LOGGER.log(Level.SEVERE, "Error general el almacenamiento del activo {0}", e);
+            LOGGER.error("Error general el almacenamiento del activo " + e); 
             ActivosResponseDto activosResponseDto = new ActivosResponseDto();
             activosResponseDto.setResult(new ResultDto(ConstantesAplicacion.MISSING_DATA_CODE, "Error general el almacenamiento del activo " + e.getMessage()));
             estableceRespuesta(ConstantesAplicacion.MISSING_DATA_CODE);
@@ -340,13 +340,13 @@ public class ServicioActivos {
             estableceRespuesta(ConstantesAplicacion.MISSING_DATA_CODE);
             return activosResponseDto;
         } catch (EJBException ev) {
-            LOGGER.log(Level.SEVERE, "Error en parametros enviados parametros imcompletos {0}", ev);
+            LOGGER.error("Error en parametros enviados parametros imcompletos " + ev); 
             ActivosResponseDto activosResponseDto = new ActivosResponseDto();
             activosResponseDto.setResult(new ResultDto(ConstantesAplicacion.MISSING_DATA_CODE, "Error en parametros enviados parametros imcompletos " + ev.getMessage()));
             estableceRespuesta(ConstantesAplicacion.MISSING_DATA_CODE);
             return activosResponseDto;
         } catch (Exception e) {
-            LOGGER.log(Level.SEVERE, "Error general el almacenamiento del activo {0}", e);
+            LOGGER.error( "Error general el almacenamiento del activo " + e); 
             ActivosResponseDto activosResponseDto = new ActivosResponseDto();
             activosResponseDto.setResult(new ResultDto(ConstantesAplicacion.MISSING_DATA_CODE, "Error general el almacenamiento del activo " + e.getMessage()));
             estableceRespuesta(ConstantesAplicacion.MISSING_DATA_CODE);
