@@ -7,11 +7,15 @@ package com.asd.api.ejb.activos.impl;
 
 import com.asd.api.common.activos.constantes.ConstantesAplicacion;
 import com.asd.api.common.activos.dto.ActivosResponseDto;
+import com.asd.api.common.activos.dto.AreasResponseDto;
+import com.asd.api.common.activos.dto.PersonasResponseDto;
 import com.asd.api.common.activos.dto.ResultDto;
 import com.asd.api.persistencia.constantes.JpaConstantes;
 import com.asd.api.ejb.activos.ActivosBeanLocal;
 import com.asd.api.persistencia.entidades.ActivoFijo;
+import com.asd.api.persistencia.entidades.Area;
 import com.asd.api.persistencia.entidades.EstadoActual;
+import com.asd.api.persistencia.entidades.Persona;
 import com.asd.api.persistencia.entidades.Tipo;
 import java.util.Date;
 import java.util.List;
@@ -254,6 +258,105 @@ public class ActivosBean implements ActivosBeanLocal {
         }
 
         return null;
+    }
+    
+    /** 
+     * Implementacion de funcion que actualiza un registro en la tabla de activos fijos 
+     * @param activoFijo 
+     * @return  
+     */ 
+    @Override 
+    public boolean actualizarActivoFijo(ActivoFijo activoFijo) { 
+        ActivoFijo m_activoFijo = em.find(ActivoFijo.class, activoFijo.getId()); 
+         
+        if(m_activoFijo == null){ 
+            return false; 
+        } 
+         
+        m_activoFijo.setFechaBaja(activoFijo.getFechaBaja()); 
+        m_activoFijo.setNumeroInternoInventario(activoFijo.getNumeroInternoInventario()); 
+         
+        em.merge(m_activoFijo); 
+         
+        return true; 
+    } 
+    
+    
+    /**
+     * Implementacion de funcion que extrae listado completo de areas
+     *
+     * @return ActivosResponseDto
+     */
+    @Override
+    public AreasResponseDto obtenerAreas() {
+
+        AreasResponseDto areasResponseDto = new AreasResponseDto();
+
+        try {
+            /* Se realiza la consulta de todos los activos */
+            LOGGER.log(Level.INFO, "Se realiza consulta de areas");
+            Query q = em.createNamedQuery("Area.findAll", Area.class);
+
+            List<Area> areasList = q.getResultList();
+
+            LOGGER.log(Level.INFO, "Registros consultados: {0}", areasList.size());
+
+            if (areasList.size() > 0) {
+                /* Se llena Dto de respuesta */
+                areasResponseDto.setActivo(areasList);
+                areasResponseDto.setResult(new ResultDto(ConstantesAplicacion.SUCESS_CODE, "Consulta realizada correctamente"));
+            } else {
+                areasResponseDto.setResult(new ResultDto(ConstantesAplicacion.NO_RESULT_CODE, "No se generaron resultados"));
+            }
+        } catch (NoResultException e) {
+            LOGGER.log(Level.INFO, "No existen activos {0}", e);
+            areasResponseDto.setResult(new ResultDto(ConstantesAplicacion.NO_RESULT_CODE, "No se generaron resultados"));
+
+        } catch (Exception e) {
+            LOGGER.log(Level.SEVERE, "Error general en la consulta del activo {0}", e);
+            areasResponseDto.setResult(new ResultDto(ConstantesAplicacion.ERROR_CODE, "Error general en la consulta del activo "));
+        }
+
+        return areasResponseDto;
+    }
+    
+    
+    /**
+     * Implementacion de funcion que extrae listado completo de personas
+     *
+     * @return ActivosResponseDto
+     */
+    @Override
+    public PersonasResponseDto obtenerPersonas() {
+
+        PersonasResponseDto personasResponseDto = new PersonasResponseDto();
+
+        try {
+            /* Se realiza la consulta de todos los activos */
+            LOGGER.log(Level.INFO, "Se realiza consulta de personas");
+            Query q = em.createNamedQuery("Persona.findAll", Persona.class);
+
+            List<Persona> personasList = q.getResultList();
+
+            LOGGER.log(Level.INFO, "Registros consultados: {0}", personasList.size());
+
+            if (personasList.size() > 0) {
+                /* Se llena Dto de respuesta */
+                personasResponseDto.setActivo(personasList);
+                personasResponseDto.setResult(new ResultDto(ConstantesAplicacion.SUCESS_CODE, "Consulta realizada correctamente"));
+            } else {
+                personasResponseDto.setResult(new ResultDto(ConstantesAplicacion.NO_RESULT_CODE, "No se generaron resultados"));
+            }
+        } catch (NoResultException e) {
+            LOGGER.log(Level.INFO, "No existen activos {0}", e);
+            personasResponseDto.setResult(new ResultDto(ConstantesAplicacion.NO_RESULT_CODE, "No se generaron resultados"));
+
+        } catch (Exception e) {
+            LOGGER.log(Level.SEVERE, "Error general en la consulta del activo {0}", e);
+            personasResponseDto.setResult(new ResultDto(ConstantesAplicacion.ERROR_CODE, "Error general en la consulta del activo "));
+        }
+
+        return personasResponseDto;
     }
 
 }
