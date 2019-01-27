@@ -6,6 +6,9 @@
 package com.asd.api.ejb.activos;
  
 import com.asd.api.common.activos.dto.ActivosResponseDto;
+import com.asd.api.persistencia.entidades.ActivoFijo; 
+import com.asd.api.persistencia.entidades.EstadoActual; 
+import com.asd.api.persistencia.entidades.Tipo; 
 import java.util.Date;
 import javax.ejb.Local;
  
@@ -46,5 +49,28 @@ public interface ActivosBeanLocal {
      * @return ActivosResponseDto
      */
     public ActivosResponseDto obtenerActivosFechaCompra(Date tipo);
+    
+    
+    /** 
+     * Funcion que crea un registro en la tabla de activos fijos 
+     * @param activoFijo  
+     */ 
+    public void crearActivoFijo(ActivoFijo activoFijo); 
+ 
+     
+    /** 
+     * Funcion que busca tipo de activo por Id 
+     * @param id 
+     * @return  
+     */ 
+    public Tipo getTipoActivoById(Integer id); 
+ 
+     
+    /** 
+     * Funcion que busca tipo de activo por Id 
+     * @param id 
+     * @return  
+     */ 
+    public EstadoActual getEstadoActualActivoById(Integer id); 
     
 }
