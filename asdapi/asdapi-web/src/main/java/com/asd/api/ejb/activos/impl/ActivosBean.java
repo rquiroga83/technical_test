@@ -23,18 +23,21 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
+import javax.persistence.NoResultException;
 import javax.persistence.PersistenceContext;
- 
+import javax.persistence.Query;
+
 /**
  * Implementacion bean de sesion que brinda servicios sobre los activos
+ *
  * @author rquiroga83@gmail.com
  * @version 1.0
  */
 @Stateless
-public class ActivosBean implements ActivosBeanLocal  {
-    
+public class ActivosBean implements ActivosBeanLocal {
+
     private static final Logger LOGGER = Logger.getLogger(ActivosBean.class.getName());
- 
+
     @PersistenceContext(unitName = JpaConstantes.NOMBRE_UNIDAD_PERSISTENCIA)
     private EntityManager em;
 

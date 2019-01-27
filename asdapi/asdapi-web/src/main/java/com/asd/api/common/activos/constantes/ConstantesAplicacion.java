@@ -15,10 +15,10 @@ import java.util.logging.Logger;
  */
 public class ConstantesAplicacion {
     
-    private ConstantesAplicacion() { 
-    } 
+    private ConstantesAplicacion() {
+    }
  
-    private static final Logger LOGGER = Logger.getLogger(ConstantesAplicacion.class.getName()); 
+    private static final Logger LOGGER = Logger.getLogger(ConstantesAplicacion.class.getName());
  
     /**
      * Constantes de aplicacion

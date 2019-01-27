@@ -11,6 +11,13 @@ import com.asd.api.common.activos.dto.AreasResponseDto;
 import com.asd.api.common.activos.dto.PersonasResponseDto;
 import com.asd.api.common.activos.dto.ResultDto;
 import com.asd.api.ejb.activos.ActivosBeanLocal;
+import com.asd.api.persistencia.entidades.ActivoFijo;
+import com.asd.api.persistencia.entidades.EstadoActual;
+import com.asd.api.persistencia.entidades.Tipo;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.ejb.EJB;
 import javax.ejb.EJBException;
@@ -22,41 +29,47 @@ import javax.ws.rs.FormParam;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
+import javax.ws.rs.Produces;
+import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.Context;
- 
+import javax.ws.rs.core.MediaType;
+
 /**
  * Clase que implementa front de servicios web
+ *
  * @author rquiroga83@gmail.com
  * @version 1.0
  */
-
 @Path("servicioActivos")
 @RequestScoped
 public class ServicioActivos {
-    
+
     private static final Logger LOGGER = Logger.getLogger(ServicioActivos.class.getName());
-    
+
     @Context
     private HttpServletResponse httpServletResponse;
-    
+
     /**
-     * Inyeccion de EJB ActivosBeanLocal para ser utilizado en la capa de servicios
+     * Inyeccion de EJB ActivosBeanLocal para ser utilizado en la capa de
+     * servicios
      */
     @EJB
     private ActivosBeanLocal activosBean;
-    
-    
+
+    /**
+     * Variable utilizada para formato de fechas
+     */
+    private SimpleDateFormat df = new SimpleDateFormat("yyyy-MM-dd");
+
     /**
      * Crea una neva instancia de ActivosService
      */
     public ServicioActivos() {
     }
-    
-    
+
     /**
      * Funcion que establece los headers del servicio.
      *
-     * @since 25/04/2017
      *
      */
     public void establecerCabeceras() {
