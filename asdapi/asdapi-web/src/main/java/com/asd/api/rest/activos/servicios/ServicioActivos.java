@@ -7,6 +7,8 @@ package com.asd.api.rest.activos.servicios;
 
 import com.asd.api.common.activos.constantes.ConstantesAplicacion;
 import com.asd.api.common.activos.dto.ActivosResponseDto;
+import com.asd.api.common.activos.dto.AreasResponseDto;
+import com.asd.api.common.activos.dto.PersonasResponseDto;
 import com.asd.api.common.activos.dto.ResultDto;
 import com.asd.api.ejb.activos.ActivosBeanLocal;
 import com.asd.api.persistencia.entidades.ActivoFijo;
@@ -18,8 +20,10 @@ import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.ejb.EJB;
+import javax.ejb.EJBException;
 import javax.enterprise.context.RequestScoped;
 import javax.servlet.http.HttpServletResponse;
+import javax.validation.ConstraintViolationException;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.FormParam;
 import javax.ws.rs.GET;
@@ -207,13 +211,13 @@ public class ServicioActivos {
             Date dFechaCompra = new java.sql.Date(df.parse(fechaCompra).getTime());
             Date dFechaBaja = new java.sql.Date(df.parse(fechaBaja).getTime());
 
-            if(dFechaBaja.before(dFechaCompra)){
+            if (dFechaBaja.before(dFechaCompra)) {
                 ActivosResponseDto activosResponseDto = new ActivosResponseDto();
                 activosResponseDto.setResult(new ResultDto(ConstantesAplicacion.MISSING_DATA_CODE, "La fecha de baja no puede ser inferior a la fecha de compra"));
                 estableceRespuesta(ConstantesAplicacion.MISSING_DATA_CODE);
                 return activosResponseDto;
             }
-            
+
             if (tipoId == null) {
                 ActivosResponseDto activosResponseDto = new ActivosResponseDto();
                 activosResponseDto.setResult(new ResultDto(ConstantesAplicacion.MISSING_DATA_CODE, "Tipo no puede ser nulo"));
@@ -269,6 +273,13 @@ public class ServicioActivos {
             activosResponseDto.setResult(new ResultDto(ConstantesAplicacion.MISSING_DATA_CODE, "Formato de fecha incorrecto! intente de nuevo con el formato yyyy-MM-dd"));
             estableceRespuesta(ConstantesAplicacion.MISSING_DATA_CODE);
             return activosResponseDto;
+        } catch (ConstraintViolationException ev) {
+            LOGGER.log(Level.SEVERE, "Error en parametros enviados parametros imcompletos {0}", ev);
+            ActivosResponseDto activosResponseDto = new ActivosResponseDto();
+            activosResponseDto.setResult(new ResultDto(ConstantesAplicacion.MISSING_DATA_CODE, "Error en parametros enviados parametros imcompletos " + ev.getMessage()));
+            estableceRespuesta(ConstantesAplicacion.MISSING_DATA_CODE);
+            return activosResponseDto;
+
         } catch (Exception e) {
             LOGGER.log(Level.SEVERE, "Error general el almacenamiento del activo {0}", e);
             ActivosResponseDto activosResponseDto = new ActivosResponseDto();
@@ -278,4 +289,106 @@ public class ServicioActivos {
         }
     }
 
+    /**
+     * Servicio REST encargado de la creacion de activos fijos
+     *
+     * @param id
+     * @param numero_interno_inventario
+     * @param fechaBaja
+     * @param servletResponse
+     * @return
+     */
+    @POST
+    @Path("/actualizarActivoFijo")
+    @Produces(MediaType.APPLICATION_JSON)
+    @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
+    public ActivosResponseDto actualizarActivoFijo(@FormParam("id") Integer id,
+            @FormParam("numero_interno_inventario") String numero_interno_inventario,
+            @FormParam("fecha_baja") String fechaBaja,
+            @Context HttpServletResponse servletResponse) {
+
+        establecerCabeceras();
+        try {
+            Date dFechaBaja = new java.sql.Date(df.parse(fechaBaja).getTime());
+
+            if (id == null) {
+                ActivosResponseDto activosResponseDto = new ActivosResponseDto();
+                activosResponseDto.setResult(new ResultDto(ConstantesAplicacion.MISSING_DATA_CODE, "El Id no puede ser nulo"));
+                estableceRespuesta(ConstantesAplicacion.MISSING_DATA_CODE);
+                return activosResponseDto;
+            }
+
+            ActivoFijo activoFijo = new ActivoFijo();
+            activoFijo.setId(id);
+            activoFijo.setNumeroInternoInventario(numero_interno_inventario);
+            activoFijo.setFechaBaja(dFechaBaja);
+
+            if (!activosBean.actualizarActivoFijo(activoFijo)) {
+                ActivosResponseDto activosResponseDto = new ActivosResponseDto();
+                activosResponseDto.setResult(new ResultDto(ConstantesAplicacion.MISSING_DATA_CODE, "El activo a actualizar no existe"));
+                estableceRespuesta(ConstantesAplicacion.MISSING_DATA_CODE);
+                return activosResponseDto;
+            }
+
+            ActivosResponseDto activosResponseDto = new ActivosResponseDto();
+            activosResponseDto.setResult(new ResultDto(ConstantesAplicacion.SUCESS_CODE, "Datos actualizados correctamente"));
+            return activosResponseDto;
+        } catch (final ParseException ex) {
+            // Si se presenta error en la conversion de la fecha 
+            ActivosResponseDto activosResponseDto = new ActivosResponseDto();
+            activosResponseDto.setResult(new ResultDto(ConstantesAplicacion.MISSING_DATA_CODE, "Formato de fecha incorrecto! intente de nuevo con el formato yyyy-MM-dd"));
+            estableceRespuesta(ConstantesAplicacion.MISSING_DATA_CODE);
+            return activosResponseDto;
+        } catch (EJBException ev) {
+            LOGGER.log(Level.SEVERE, "Error en parametros enviados parametros imcompletos {0}", ev);
+            ActivosResponseDto activosResponseDto = new ActivosResponseDto();
+            activosResponseDto.setResult(new ResultDto(ConstantesAplicacion.MISSING_DATA_CODE, "Error en parametros enviados parametros imcompletos " + ev.getMessage()));
+            estableceRespuesta(ConstantesAplicacion.MISSING_DATA_CODE);
+            return activosResponseDto;
+        } catch (Exception e) {
+            LOGGER.log(Level.SEVERE, "Error general el almacenamiento del activo {0}", e);
+            ActivosResponseDto activosResponseDto = new ActivosResponseDto();
+            activosResponseDto.setResult(new ResultDto(ConstantesAplicacion.MISSING_DATA_CODE, "Error general el almacenamiento del activo " + e.getMessage()));
+            estableceRespuesta(ConstantesAplicacion.MISSING_DATA_CODE);
+            return activosResponseDto;
+        }
+    }
+
+    
+    
+    /**
+     * servicio REST que extrae listado completo de areas
+     *
+     * @return ActivosResponseDto
+     */
+    @Path("/obtenerAreas")
+    @GET
+    @Produces({MediaType.APPLICATION_JSON})
+    public AreasResponseDto obtenerAreas() {
+
+        establecerCabeceras();
+        AreasResponseDto areasResponseDto = activosBean.obtenerAreas();
+        estableceRespuesta(areasResponseDto.getResult().getResultCode());
+
+        return areasResponseDto;
+    }
+    
+    
+    /**
+     * servicio REST que extrae listado completo de personas
+     *
+     * @return ActivosResponseDto
+     */
+    @Path("/obtenerPersonas")
+    @GET
+    @Produces({MediaType.APPLICATION_JSON})
+    public PersonasResponseDto obtenerPersonas() {
+
+        establecerCabeceras();
+        PersonasResponseDto personasResponseDto = activosBean.obtenerPersonas();
+        estableceRespuesta(personasResponseDto.getResult().getResultCode());
+
+        return personasResponseDto;
+    }
+    
 }

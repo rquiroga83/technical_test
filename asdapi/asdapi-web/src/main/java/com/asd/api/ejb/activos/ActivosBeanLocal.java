@@ -6,6 +6,8 @@
 package com.asd.api.ejb.activos;
  
 import com.asd.api.common.activos.dto.ActivosResponseDto;
+import com.asd.api.common.activos.dto.AreasResponseDto;
+import com.asd.api.common.activos.dto.PersonasResponseDto;
 import com.asd.api.persistencia.entidades.ActivoFijo; 
 import com.asd.api.persistencia.entidades.EstadoActual; 
 import com.asd.api.persistencia.entidades.Tipo; 
@@ -21,7 +23,7 @@ import javax.ejb.Local;
 @Local
 public interface ActivosBeanLocal {
     
- /**
+    /**
      * Funcion que extrae listado completo de activos
      * @return ActivosResponseDto
      */
@@ -72,5 +74,24 @@ public interface ActivosBeanLocal {
      * @return  
      */ 
     public EstadoActual getEstadoActualActivoById(Integer id); 
+    
+    /** 
+     * Funcion que actualiza un registro en la tabla de activos fijos 
+     * @param activoFijo 
+     */ 
+    public boolean actualizarActivoFijo(ActivoFijo activoFijo); 
+    
+    /**
+     * Funcion que extrae listado completo de areas
+     * @return ActivosResponseDto
+     */
+    public AreasResponseDto obtenerAreas();
+    
+    
+    /**
+     * Funcion que extrae listado completo de areas
+     * @return ActivosResponseDto
+     */
+    public PersonasResponseDto obtenerPersonas();
     
 }
