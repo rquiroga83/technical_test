@@ -20,7 +20,6 @@ public class ConstantesAplicacion {
  
     private static final Logger LOGGER = Logger.getLogger(ConstantesAplicacion.class.getName());
  
- 
     /**
      * Constantes de aplicacion
      */
