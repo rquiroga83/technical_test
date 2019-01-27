@@ -359,4 +359,5 @@ public class ActivosBean implements ActivosBeanLocal {
         return personasResponseDto;
     }
 
+    
 }
