@@ -18,7 +18,7 @@
         <class-name>com.mysql.jdbc.jdbc2.optional.MysqlXADataSource</class-name>
         <server-name>localhost</server-name>
         <port-number>3306</port-number>
-        <database-name>asdapi</database-name>
+        <database-name>mysql</database-name>
         <user>root</user>
         <password>root</password>
         <!-- Example of how to use a Payara specific custom connection pool setting -->

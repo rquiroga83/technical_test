@@ -15,18 +15,20 @@ import java.util.logging.Logger;
  */
 public class ConstantesAplicacion {
     
-    private ConstantesAplicacion() {
-    }
+    private ConstantesAplicacion() { 
+    } 
  
-    private static final Logger LOGGER = Logger.getLogger(ConstantesAplicacion.class.getName());
+    private static final Logger LOGGER = Logger.getLogger(ConstantesAplicacion.class.getName()); 
  
  
-    /**
-     * Constantes de aplicacion
-     */
-    public static final int ERROR_CODE = 500;
-    public static final int SUCESS_CODE = 200;
-    public static final int NO_RESULT_CODE = 404;
-    public static final int MISSING_DATA_CODE = 400;
- 
+    /** 
+     * Constantes de aplicacion 
+     */ 
+    public static final int ERROR_CODE = -1; 
+    public static final int SUCESS_CODE = 0; 
+    public static final int ID_TIMER_CNFIG_PROPERTY = 6; 
+    public static final int ID_TITULO_INIT_PARAM = 3; 
+    public static final int ID_CONTENT_INIT_PARAM = 4; 
+    public static final int ID_LOGOUT_TIME = 5; 
+
 }
