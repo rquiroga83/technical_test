@@ -47,8 +47,8 @@ public class EstadoActual implements Serializable {
     @Size(min = 1, max = 100)
     @Column(name = "estado")
     private String estado;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "estadoActualId")
-    private Collection<ActivoFijo> activoFijoCollection;
+    //@OneToMany(cascade = CascadeType.ALL, mappedBy = "estadoActualId")
+    //private Collection<ActivoFijo> activoFijoCollection;
 
     public EstadoActual() {
     }
@@ -78,14 +78,14 @@ public class EstadoActual implements Serializable {
         this.estado = estado;
     }
 
-    @XmlTransient
+    /*@XmlTransient
     public Collection<ActivoFijo> getActivoFijoCollection() {
         return activoFijoCollection;
     }
 
     public void setActivoFijoCollection(Collection<ActivoFijo> activoFijoCollection) {
         this.activoFijoCollection = activoFijoCollection;
-    }
+    }*/
 
     @Override
     public int hashCode() {

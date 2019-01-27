@@ -47,8 +47,8 @@ public class Tipo implements Serializable {
     @Size(min = 1, max = 100)
     @Column(name = "nombre")
     private String nombre;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "tipoId")
-    private Collection<ActivoFijo> activoFijoCollection;
+    /*@OneToMany(cascade = CascadeType.ALL, mappedBy = "tipoId")
+    private Collection<ActivoFijo> activoFijoCollection;*/
 
     public Tipo() {
     }
@@ -78,6 +78,7 @@ public class Tipo implements Serializable {
         this.nombre = nombre;
     }
 
+    /*
     @XmlTransient
     public Collection<ActivoFijo> getActivoFijoCollection() {
         return activoFijoCollection;
@@ -86,6 +87,7 @@ public class Tipo implements Serializable {
     public void setActivoFijoCollection(Collection<ActivoFijo> activoFijoCollection) {
         this.activoFijoCollection = activoFijoCollection;
     }
+    */
 
     @Override
     public int hashCode() {

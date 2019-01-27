@@ -29,12 +29,20 @@
     </data-source>
  
     <servlet>
-        <servlet-name>Jersey Web Application</servlet-name>
+        <servlet-name>jersey</servlet-name>
         <servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>
+        <init-param>
+            <param-name>jersey.config.server.provider.packages</param-name>
+            <param-value>
+                io.swagger.v3.jaxrs2.integration.resources,com.asd.api.rest.activos.servicios
+            </param-value>
+        </init-param>
         <load-on-startup>1</load-on-startup>
     </servlet>
+   
+    
     <servlet-mapping>
-        <servlet-name>Jersey Web Application</servlet-name>
+        <servlet-name>jersey</servlet-name>
         <url-pattern>/services/*</url-pattern>
     </servlet-mapping>
 </web-app>

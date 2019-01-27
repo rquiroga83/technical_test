@@ -1,145 +1,55 @@
-[2019-01-27T03:37:09.204-0500] [] [ADVERTENCIA] [] [PayaraMicro] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578229204] [levelValue: 900] Payara Micro Runtime directory is located in a temporary file location which can be cleaned by system processes.
+[2019-01-27T18:16:33.328-0500] [] [INFORMACIÓN] [] [fish.payara.nucleus.hazelcast.HazelcastCore] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548630993328] [levelValue: 800] JSR107 Caching Provider Bound to JNDI at payara/CachingProvider
 
-[2019-01-27T03:37:09.249-0500] [] [INFORMACIÓN] [] [PayaraMicro] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578229249] [levelValue: 800] Payara Micro Runtime directory is located at C:\Users\andres\AppData\Local\Temp\payaramicro-rt592493202314652086tmp
+[2019-01-27T18:16:33.333-0500] [] [INFORMACIÓN] [] [fish.payara.nucleus.hazelcast.HazelcastCore] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548630993333] [levelValue: 800] JSR107 Default Cache Manager Bound to JNDI at payara/CacheManager
 
-[2019-01-27T03:37:09.274-0500] [] [INFORMACIÓN] [] [fish.payara.micro.boot.runtime.PayaraMicroRuntimeBuilder] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578229274] [levelValue: 800] Built Payara Micro Runtime
-
-[2019-01-27T03:37:11.099-0500] [] [INFORMACIÓN] [NCLS-CORE-00046] [javax.enterprise.system.core] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578231099] [levelValue: 800] Cannot find javadb client jar file, derby jdbc driver will not be available by default.
-
-[2019-01-27T03:37:11.692-0500] [] [INFO] [] [org.hibernate.validator.internal.util.Version] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578231692] [levelValue: 800] HV000001: Hibernate Validator 6.0.12.Final
-
-[2019-01-27T03:37:13.119-0500] [] [INFORMACIÓN] [] [fish.payara.micro.boot.runtime.BootCommand] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578233119] [levelValue: 800] Boot Command set returned with result SUCCESS : PlainTextActionReporterSUCCESSDescription: set AdminCommandnull
-    configs.config.server-config.hazelcast-config-specific-configuration.lite=false
-
-
-[2019-01-27T03:37:13.185-0500] [] [INFORMACIÓN] [] [fish.payara.micro.boot.runtime.BootCommand] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578233185] [levelValue: 800] Boot Command set returned with result SUCCESS : PlainTextActionReporterSUCCESSDescription: set AdminCommandnull
-    hazelcast-runtime-configuration.host-aware-partitioning=true
-
-
-[2019-01-27T03:37:13.212-0500] [] [INFORMACIÓN] [] [fish.payara.micro.boot.runtime.BootCommand] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578233212] [levelValue: 800] Boot Command set returned with result SUCCESS : PlainTextActionReporterSUCCESSDescription: set AdminCommandnull
-    hazelcast-runtime-configuration.discovery-mode=multicast
-
-
-[2019-01-27T03:37:14.713-0500] [] [INFORMACIÓN] [] [org.glassfish.ha.store.spi.BackingStoreFactoryRegistry] [tid: _ThreadID=21 _ThreadName=RunLevelControllerThread-1548578233314] [timeMillis: 1548578234713] [levelValue: 800] Registered fish.payara.ha.hazelcast.store.HazelcastBackingStoreFactoryProxy for persistence-type = hazelcast in BackingStoreFactoryRegistry
-
-[2019-01-27T03:37:15.108-0500] [] [INFORMACIÓN] [NCLS-CORE-00101] [javax.enterprise.system.core] [tid: _ThreadID=20 _ThreadName=RunLevelControllerThread-1548578233297] [timeMillis: 1548578235108] [levelValue: 800] Network Listener http-listener started in: 27ms - bound to [/0.0.0.0:8080]
-
-[2019-01-27T03:37:15.120-0500] [] [INFORMACIÓN] [NCLS-CORE-00058] [javax.enterprise.system.core] [tid: _ThreadID=20 _ThreadName=RunLevelControllerThread-1548578233297] [timeMillis: 1548578235120] [levelValue: 800] Network listener https-listener on port 8443 disabled per domain.xml
-
-[2019-01-27T03:37:15.123-0500] [] [INFORMACIÓN] [NCLS-CORE-00087] [javax.enterprise.system.core] [tid: _ThreadID=20 _ThreadName=RunLevelControllerThread-1548578233297] [timeMillis: 1548578235123] [levelValue: 800] Grizzly 2.4.3 started in: 1.291ms - bound to [http-listener:8080]
-
-[2019-01-27T03:37:15.136-0500] [] [INFORMACIÓN] [NCLS-CORE-00017] [javax.enterprise.system.core] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578235136] [levelValue: 800] Payara Micro  5.184 #badassmicrofish (89) startup time : Embedded (3.989ms), startup services(1.865ms), total(5.854ms)
-
-[2019-01-27T03:37:15.858-0500] [] [INFORMACIÓN] [NCLS-JMX-00006] [javax.enterprise.system.jmx] [tid: _ThreadID=36 _ThreadName=Thread-6] [timeMillis: 1548578235858] [levelValue: 800] JMXStartupService has disabled JMXConnector system
-
-[2019-01-27T03:37:20.343-0500] [] [INFORMACIÓN] [NCLS-SECURITY-01002] [javax.enterprise.system.core.security] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578240343] [levelValue: 800] Java security manager is disabled.
-
-[2019-01-27T03:37:20.345-0500] [] [INFORMACIÓN] [NCLS-SECURITY-01010] [javax.enterprise.system.core.security] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578240345] [levelValue: 800] Entering Security Startup Service.
-
-[2019-01-27T03:37:20.350-0500] [] [INFORMACIÓN] [NCLS-SECURITY-01143] [javax.enterprise.system.core.security] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578240350] [levelValue: 800] Loading policy provider com.sun.enterprise.security.jacc.provider.SimplePolicyProvider.
-
-[2019-01-27T03:37:20.406-0500] [] [INFORMACIÓN] [NCLS-SECURITY-01011] [javax.enterprise.system.core.security] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578240406] [levelValue: 800] Security Service(s) started successfully.
-
-[2019-01-27T03:37:21.519-0500] [] [INFORMACIÓN] [AS-WEB-GLUE-00198] [javax.enterprise.web] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578241519] [levelValue: 800] Created HTTP listener http-listener on host/port 0.0.0.0:8080
-
-[2019-01-27T03:37:21.577-0500] [] [INFORMACIÓN] [AS-WEB-GLUE-00200] [javax.enterprise.web] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578241577] [levelValue: 800] Created virtual server server
-
-[2019-01-27T03:37:22.169-0500] [] [INFORMACIÓN] [AS-WEB-CORE-00306] [javax.enterprise.web.core] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578242169] [levelValue: 800] Setting JAAS app name glassfish-web
-
-[2019-01-27T03:37:22.178-0500] [] [INFORMACIÓN] [AS-WEB-GLUE-00201] [javax.enterprise.web] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578242178] [levelValue: 800] Virtual server server loaded default web module 
-
-[2019-01-27T03:37:31.004-0500] [] [INFORMACIÓN] [] [org.eclipse.persistence.session./file:/C:/Users/andres/AppData/Local/Temp/payaramicro-rt592493202314652086tmp/applications/asdapi-web-1.0/WEB-INF/classes/_activos-pu] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578251004] [levelValue: 800] EclipseLink, version: Eclipse Persistence Services - 2.7.3.v20180807-4be1041
-
-[2019-01-27T03:37:32.465-0500] [] [INFORMACIÓN] [] [org.eclipse.persistence.session./file:/C:/Users/andres/AppData/Local/Temp/payaramicro-rt592493202314652086tmp/applications/asdapi-web-1.0/WEB-INF/classes/_activos-pu.connection] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578252465] [levelValue: 800] /file:/C:/Users/andres/AppData/Local/Temp/payaramicro-rt592493202314652086tmp/applications/asdapi-web-1.0/WEB-INF/classes/_activos-pu login successful
-
-[2019-01-27T03:37:32.866-0500] [] [INFO] [] [org.jboss.weld.Version] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578252866] [levelValue: 800] WELD-000900: 3.0.5 (p1)
-
-[2019-01-27T03:37:33.595-0500] [] [INFORMACIÓN] [AS-EJB-00054] [javax.enterprise.ejb.container] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578253595] [levelValue: 800] Portable JNDI names for EJB ActivosBean: [java:global/asdapi-web-1.0/ActivosBean!com.asd.api.ejb.activos.ActivosBeanLocal, java:global/asdapi-web-1.0/ActivosBean]
-
-[2019-01-27T03:37:33.695-0500] [] [INFORMACIÓN] [AS-EJB-00054] [javax.enterprise.ejb.container] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578253695] [levelValue: 800] Portable JNDI names for EJB I18n: [java:global/asdapi-web-1.0/I18n!com.asd.api.ejb.i18n.I18nLocal, java:global/asdapi-web-1.0/I18n]
-
-[2019-01-27T03:37:34.768-0500] [] [INFO] [] [org.jboss.weld.Event] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578254768] [levelValue: 800] WELD-000411: Observer method [BackedAnnotatedMethod] com.sun.jersey.server.impl.cdi.CDIExtension.processAnnotatedType(@Observes ProcessAnnotatedType<T>) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.
-
-[2019-01-27T03:37:37.315-0500] [] [INFORMACIÓN] [] [javax.enterprise.system.core] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578257315] [levelValue: 800] asdapi-web-1.0 was successfully deployed in 21.188 milliseconds.
-
-[2019-01-27T03:37:37.320-0500] [] [INFORMACIÓN] [] [PayaraMicro] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578257320] [levelValue: 800] Deployed 1 archive(s)
-
-[2019-01-27T03:37:38.320-0500] [] [INFORMACIÓN] [] [com.hazelcast.instance.AddressPicker] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578258320] [levelValue: 800] [LOCAL] [development] [3.11] Using bind address: /25.32.91.217:6900
-
-[2019-01-27T03:37:38.321-0500] [] [INFORMACIÓN] [] [com.hazelcast.instance.AddressPicker] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578258321] [levelValue: 800] [LOCAL] [development] [3.11] Using public address: /25.32.91.217:6900
-
-[2019-01-27T03:37:38.366-0500] [] [INFORMACIÓN] [] [com.hazelcast.system] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578258366] [levelValue: 800] [25.32.91.217]:6900 [development] [3.11] Hazelcast 3.11 (20181023 - 1500bbb) starting at [25.32.91.217]:6900
-
-[2019-01-27T03:37:38.367-0500] [] [INFORMACIÓN] [] [com.hazelcast.system] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578258367] [levelValue: 800] [25.32.91.217]:6900 [development] [3.11] Copyright (c) 2008-2018, Hazelcast, Inc. All Rights Reserved.
-
-[2019-01-27T03:37:38.369-0500] [] [INFORMACIÓN] [] [com.hazelcast.instance.Node] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578258369] [levelValue: 800] [25.32.91.217]:6900 [development] [3.11] A non-empty group password is configured for the Hazelcast member. Starting with Hazelcast version 3.8.2, members with the same group name, but with different group passwords (that do not use authentication) form a cluster. The group password configuration will be removed completely in a future release.
-
-[2019-01-27T03:37:39.068-0500] [] [INFORMACIÓN] [] [com.hazelcast.spi.impl.operationservice.impl.BackpressureRegulator] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578259068] [levelValue: 800] [25.32.91.217]:6900 [development] [3.11] Backpressure is disabled
-
-[2019-01-27T03:37:41.167-0500] [] [INFORMACIÓN] [] [com.hazelcast.instance.Node] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578261167] [levelValue: 800] [25.32.91.217]:6900 [development] [3.11] Creating MulticastJoiner
-
-[2019-01-27T03:37:41.603-0500] [] [INFORMACIÓN] [] [com.hazelcast.spi.impl.operationexecutor.impl.OperationExecutorImpl] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578261603] [levelValue: 800] [25.32.91.217]:6900 [development] [3.11] Starting 4 partition threads and 3 generic threads (1 dedicated for priority tasks)
-
-[2019-01-27T03:37:41.608-0500] [] [INFORMACIÓN] [] [com.hazelcast.internal.diagnostics.Diagnostics] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578261608] [levelValue: 800] [25.32.91.217]:6900 [development] [3.11] Diagnostics disabled. To enable add -Dhazelcast.diagnostics.enabled=true to the JVM arguments.
-
-[2019-01-27T03:37:41.629-0500] [] [INFORMACIÓN] [] [com.hazelcast.core.LifecycleService] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578261629] [levelValue: 800] [25.32.91.217]:6900 [development] [3.11] [25.32.91.217]:6900 is STARTING
-
-[2019-01-27T03:37:44.477-0500] [] [INFORMACIÓN] [] [com.hazelcast.internal.cluster.ClusterService] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578264477] [levelValue: 800] [25.32.91.217]:6900 [development] [3.11] 
-
-Members {size:1, ver:1} [
-	Member [25.32.91.217]:6900 - 4ce63b54-731a-4f3d-bef4-c6fcb149008c this
-]
-
-
-[2019-01-27T03:37:44.533-0500] [] [INFORMACIÓN] [] [com.hazelcast.internal.jmx.ManagementService] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578264533] [levelValue: 800] [25.32.91.217]:6900 [development] [3.11] Hazelcast JMX agent enabled.
-
-[2019-01-27T03:37:44.578-0500] [] [INFORMACIÓN] [] [com.hazelcast.core.LifecycleService] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578264578] [levelValue: 800] [25.32.91.217]:6900 [development] [3.11] [25.32.91.217]:6900 is STARTED
-
-[2019-01-27T03:37:44.615-0500] [] [INFORMACIÓN] [] [fish.payara.nucleus.hazelcast.HazelcastCore] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578264615] [levelValue: 800] Hazelcast Instance Bound to JNDI at payara/Hazelcast
-
-[2019-01-27T03:37:44.620-0500] [] [INFORMACIÓN] [] [fish.payara.nucleus.hazelcast.HazelcastCore] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578264620] [levelValue: 800] JSR107 Caching Provider Bound to JNDI at payara/CachingProvider
-
-[2019-01-27T03:37:44.621-0500] [] [INFORMACIÓN] [] [fish.payara.nucleus.hazelcast.HazelcastCore] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578264621] [levelValue: 800] JSR107 Default Cache Manager Bound to JNDI at payara/CacheManager
-
-[2019-01-27T03:37:44.629-0500] [] [INFORMACIÓN] [] [fish.payara.nucleus.cluster.PayaraCluster] [tid: _ThreadID=23 _ThreadName=Executor-Service-1] [timeMillis: 1548578264629] [levelValue: 800] [[
+[2019-01-27T18:16:33.337-0500] [] [INFORMACIÓN] [] [fish.payara.nucleus.cluster.PayaraCluster] [tid: _ThreadID=26 _ThreadName=Executor-Service-3] [timeMillis: 1548630993337] [levelValue: 800] [[
   Data Grid Status 
 Payara Data Grid State: DG Version: 35 DG Size: 1
 Instances: {
-Address: /25.32.91.217:6900 UUID: 4ce63b54-731a-4f3d-bef4-c6fcb149008c Lite: false This: true Name: Obedient-Sardine Group: MicroShoal
+Address: /25.32.91.217:6900 UUID: b5758a8b-96f8-4a01-b93f-78de97d2fde6 Lite: false This: true Name: Drab-Trout Group: MicroShoal
 }]]
 
-[2019-01-27T03:37:44.706-0500] [] [INFORMACIÓN] [AS-WEB-GLUE-00130] [javax.enterprise.web] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578264706] [levelValue: 800] Invalid Session Management Configuration for non-distributable app [asdapi-web-1.0] - defaulting to memory: persistence-type = [hazelcast] / persistenceFrequency = [web-method] / persistenceScope = [modified-session]
+[2019-01-27T18:16:33.431-0500] [] [INFORMACIÓN] [AS-WEB-GLUE-00130] [javax.enterprise.web] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548630993431] [levelValue: 800] Invalid Session Management Configuration for non-distributable app [asdapi-web-1.0] - defaulting to memory: persistence-type = [hazelcast] / persistenceFrequency = [web-method] / persistenceScope = [modified-session]
 
-[2019-01-27T03:37:44.754-0500] [] [INFORMACIÓN] [] [com.hazelcast.internal.partition.impl.PartitionStateManager] [tid: _ThreadID=24 _ThreadName=Executor-Service-2] [timeMillis: 1548578264754] [levelValue: 800] [25.32.91.217]:6900 [development] [3.11] Initializing cluster partition table arrangement...
+[2019-01-27T18:16:33.487-0500] [] [INFORMACIÓN] [] [com.hazelcast.internal.partition.impl.PartitionStateManager] [tid: _ThreadID=25 _ThreadName=Executor-Service-2] [timeMillis: 1548630993487] [levelValue: 800] [25.32.91.217]:6900 [development] [3.11] Initializing cluster partition table arrangement...
 
-[2019-01-27T03:37:45.397-0500] [] [INFORMACIÓN] [] [org.glassfish.soteria.servlet.SamRegistrationInstaller] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578265397] [levelValue: 800] Initializing Soteria 1.1-b01 for context '/asd'
+[2019-01-27T18:16:34.375-0500] [] [INFORMACIÓN] [] [com.hazelcast.internal.diagnostics.HealthMonitor] [tid: _ThreadID=91 _ThreadName=hz._hzInstance_1_development.HealthMonitor] [timeMillis: 1548630994375] [levelValue: 800] [25.32.91.217]:6900 [development] [3.11] processors=4, physical.memory.total=15,9G, physical.memory.free=6,4G, swap.space.total=24,2G, swap.space.free=8,0G, heap.memory.used=152,3M, heap.memory.free=1,1G, heap.memory.total=1,2G, heap.memory.max=3,5G, heap.memory.used/total=12,30%, heap.memory.used/max=4,20%, minor.gc.count=14, minor.gc.time=365ms, major.gc.count=3, major.gc.time=654ms, load.process=78,13%, load.system=100,00%, load.systemAverage=n/a thread.count=100, thread.peakCount=100, cluster.timeDiff=0, event.q.size=0, executor.q.async.size=0, executor.q.client.size=0, executor.q.query.size=0, executor.q.scheduled.size=0, executor.q.io.size=0, executor.q.system.size=0, executor.q.operations.size=0, executor.q.priorityOperation.size=0, operations.completed.count=6, executor.q.mapLoad.size=0, executor.q.mapLoadAllKeys.size=0, executor.q.cluster.size=0, executor.q.response.size=0, operations.running.count=0, operations.pending.invocations.percentage=0,00%, operations.pending.invocations.count=0, proxy.count=0, clientEndpoint.count=0, connection.active.count=0, client.connection.count=0, connection.count=0
 
-[2019-01-27T03:37:45.695-0500] [] [INFORMACIÓN] [] [com.hazelcast.internal.diagnostics.HealthMonitor] [tid: _ThreadID=80 _ThreadName=hz._hzInstance_1_development.HealthMonitor] [timeMillis: 1548578265695] [levelValue: 800] [25.32.91.217]:6900 [development] [3.11] processors=4, physical.memory.total=15,9G, physical.memory.free=4,4G, swap.space.total=24,5G, swap.space.free=3,8G, heap.memory.used=936,8M, heap.memory.free=392,7M, heap.memory.total=1,3G, heap.memory.max=3,5G, heap.memory.used/total=70,46%, heap.memory.used/max=25,80%, minor.gc.count=14, minor.gc.time=438ms, major.gc.count=3, major.gc.time=714ms, load.process=72,06%, load.system=97,59%, load.systemAverage=n/a thread.count=97, thread.peakCount=97, cluster.timeDiff=0, event.q.size=0, executor.q.async.size=0, executor.q.client.size=0, executor.q.query.size=0, executor.q.scheduled.size=0, executor.q.io.size=0, executor.q.system.size=0, executor.q.operations.size=0, executor.q.priorityOperation.size=0, operations.completed.count=6, executor.q.mapLoad.size=0, executor.q.mapLoadAllKeys.size=0, executor.q.cluster.size=0, executor.q.response.size=0, operations.running.count=0, operations.pending.invocations.percentage=0,00%, operations.pending.invocations.count=0, proxy.count=0, clientEndpoint.count=0, connection.active.count=0, client.connection.count=0, connection.count=0
+[2019-01-27T18:16:35.508-0500] [] [INFORMACIÓN] [] [org.glassfish.soteria.servlet.SamRegistrationInstaller] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548630995508] [levelValue: 800] Initializing Soteria 1.1-b01 for context '/asd'
 
-[2019-01-27T03:37:46.907-0500] [] [INFORMACIÓN] [] [com.sun.jersey.api.core.servlet.WebAppResourceConfig] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578266907] [levelValue: 800] Scanning for root resource and provider classes in the Web app resource paths:
+[2019-01-27T18:16:36.345-0500] [] [INFORMACIÓN] [] [com.sun.jersey.api.core.servlet.WebAppResourceConfig] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548630996345] [levelValue: 800] Scanning for root resource and provider classes in the Web app resource paths:
   /WEB-INF/lib
   /WEB-INF/classes
 
-[2019-01-27T03:37:47.686-0500] [] [INFORMACIÓN] [] [com.sun.jersey.api.core.ScanningResourceConfig] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578267686] [levelValue: 800] Root resource classes found:
+[2019-01-27T18:16:37.622-0500] [] [INFORMACIÓN] [] [com.sun.jersey.api.core.ScanningResourceConfig] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548630997622] [levelValue: 800] Root resource classes found:
+  class io.swagger.v3.jaxrs2.integration.resources.AcceptHeaderOpenApiResource
+  class io.swagger.v3.jaxrs2.integration.resources.OpenApiResource
   class com.asd.api.rest.activos.servicios.ServicioActivos
 
-[2019-01-27T03:37:47.688-0500] [] [INFORMACIÓN] [] [com.sun.jersey.api.core.ScanningResourceConfig] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578267688] [levelValue: 800] No provider classes found.
+[2019-01-27T18:16:37.637-0500] [] [INFORMACIÓN] [] [com.sun.jersey.api.core.ScanningResourceConfig] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548630997637] [levelValue: 800] Provider classes found:
+  class org.codehaus.jackson.jaxrs.JacksonJsonProvider
+  class com.fasterxml.jackson.jaxrs.json.JacksonJaxbJsonProvider
+  class org.codehaus.jackson.jaxrs.JsonMappingExceptionMapper
+  class io.swagger.v3.jaxrs2.SwaggerSerializers
+  class com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider
+  class org.codehaus.jackson.jaxrs.JacksonJaxbJsonProvider
+  class org.codehaus.jackson.jaxrs.JsonParseExceptionMapper
 
-[2019-01-27T03:37:47.924-0500] [] [INFORMACIÓN] [] [com.sun.jersey.server.impl.cdi.CDIComponentProviderFactoryInitializer] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578267924] [levelValue: 800] CDI support is enabled
+[2019-01-27T18:16:37.876-0500] [] [INFORMACIÓN] [] [com.sun.jersey.server.impl.cdi.CDIComponentProviderFactoryInitializer] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548630997876] [levelValue: 800] CDI support is enabled
 
-[2019-01-27T03:37:47.994-0500] [] [INFORMACIÓN] [] [com.sun.jersey.server.impl.application.WebApplicationImpl] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578267994] [levelValue: 800] Initiating Jersey application, version 'Jersey: 1.19 02/11/2015 05:39 AM'
+[2019-01-27T18:16:37.913-0500] [] [INFORMACIÓN] [] [com.sun.jersey.server.impl.application.WebApplicationImpl] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548630997913] [levelValue: 800] Initiating Jersey application, version 'Jersey: 1.19.4 05/24/2017 03:46 PM'
 
-[2019-01-27T03:37:49.754-0500] [] [INFORMACIÓN] [AS-WEB-GLUE-00172] [javax.enterprise.web] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578269754] [levelValue: 800] Loading application [asdapi-web-1.0] at [/asd]
+[2019-01-27T18:16:41.033-0500] [] [INFORMACIÓN] [AS-WEB-GLUE-00172] [javax.enterprise.web] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548631001033] [levelValue: 800] Loading application [asdapi-web-1.0] at [/asd]
 
-[2019-01-27T03:37:54.403-0500] [] [INFORMACIÓN] [] [PayaraMicro] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578274403] [levelValue: 800] 
+[2019-01-27T18:16:45.770-0500] [] [INFORMACIÓN] [] [PayaraMicro] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548631005770] [levelValue: 800] 
 {
     "Instance Configuration": {
         "Host": "andres-pc",
         "Http Port(s)": "8080",
         "Https Port(s)": "",
-        "Instance Name": "Obedient-Sardine",
+        "Instance Name": "Drab-Trout",
         "Instance Group": "MicroShoal",
-        "Hazelcast Member UUID": "4ce63b54-731a-4f3d-bef4-c6fcb149008c",
+        "Hazelcast Member UUID": "b5758a8b-96f8-4a01-b93f-78de97d2fde6",
         "Deployed": [
             {
                 "Name": "asdapi-web-1.0",
@@ -150,177 +60,13 @@ Address: /25.32.91.217:6900 UUID: 4ce63b54-731a-4f3d-bef4-c6fcb149008c Lite: fal
     }
 }
 
-[2019-01-27T03:37:54.409-0500] [] [INFORMACIÓN] [] [PayaraMicro] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578274409] [levelValue: 800] 
+[2019-01-27T18:16:45.777-0500] [] [INFORMACIÓN] [] [PayaraMicro] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548631005777] [levelValue: 800] 
 Payara Micro URLs:
 http://andres-pc:8080/asd
 
 
 
-[2019-01-27T03:37:54.410-0500] [] [INFORMACIÓN] [] [PayaraMicro] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578274410] [levelValue: 800] Payara Micro  5.184 #badassmicrofish (build 89) ready in 40.995 (ms)
+[2019-01-27T18:16:45.778-0500] [] [INFORMACIÓN] [] [PayaraMicro] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548631005778] [levelValue: 800] Payara Micro  5.184 #badassmicrofish (build 89) ready in 42.394 (ms)
 
-[2019-01-27T03:39:46.993-0500] [] [INFORMACIÓN] [] [com.hazelcast.instance.Node] [tid: _ThreadID=62 _ThreadName=hz.ShutdownThread] [timeMillis: 1548578386993] [levelValue: 800] [25.32.91.217]:6900 [development] [3.11] Running shutdown hook... Current state: ACTIVE
-
-[2019-01-27T03:41:10.018-0500] [] [ADVERTENCIA] [] [PayaraMicro] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578470018] [levelValue: 900] Payara Micro Runtime directory is located in a temporary file location which can be cleaned by system processes.
-
-[2019-01-27T03:41:10.072-0500] [] [INFORMACIÓN] [] [PayaraMicro] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578470072] [levelValue: 800] Payara Micro Runtime directory is located at C:\Users\andres\AppData\Local\Temp\payaramicro-rt7258815394308191380tmp
-
-[2019-01-27T03:41:10.108-0500] [] [INFORMACIÓN] [] [fish.payara.micro.boot.runtime.PayaraMicroRuntimeBuilder] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578470108] [levelValue: 800] Built Payara Micro Runtime
-
-[2019-01-27T03:41:11.992-0500] [] [INFORMACIÓN] [NCLS-CORE-00046] [javax.enterprise.system.core] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578471992] [levelValue: 800] Cannot find javadb client jar file, derby jdbc driver will not be available by default.
-
-[2019-01-27T03:41:12.513-0500] [] [INFO] [] [org.hibernate.validator.internal.util.Version] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578472513] [levelValue: 800] HV000001: Hibernate Validator 6.0.12.Final
-
-[2019-01-27T03:41:13.528-0500] [] [INFORMACIÓN] [] [fish.payara.micro.boot.runtime.BootCommand] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578473528] [levelValue: 800] Boot Command set returned with result SUCCESS : PlainTextActionReporterSUCCESSDescription: set AdminCommandnull
-    configs.config.server-config.hazelcast-config-specific-configuration.lite=false
-
-
-[2019-01-27T03:41:13.617-0500] [] [INFORMACIÓN] [] [fish.payara.micro.boot.runtime.BootCommand] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578473617] [levelValue: 800] Boot Command set returned with result SUCCESS : PlainTextActionReporterSUCCESSDescription: set AdminCommandnull
-    hazelcast-runtime-configuration.host-aware-partitioning=true
-
-
-[2019-01-27T03:41:13.661-0500] [] [INFORMACIÓN] [] [fish.payara.micro.boot.runtime.BootCommand] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578473661] [levelValue: 800] Boot Command set returned with result SUCCESS : PlainTextActionReporterSUCCESSDescription: set AdminCommandnull
-    hazelcast-runtime-configuration.discovery-mode=multicast
-
-
-[2019-01-27T03:41:15.037-0500] [] [INFORMACIÓN] [] [org.glassfish.ha.store.spi.BackingStoreFactoryRegistry] [tid: _ThreadID=21 _ThreadName=RunLevelControllerThread-1548578473707] [timeMillis: 1548578475037] [levelValue: 800] Registered fish.payara.ha.hazelcast.store.HazelcastBackingStoreFactoryProxy for persistence-type = hazelcast in BackingStoreFactoryRegistry
-
-[2019-01-27T03:41:15.450-0500] [] [INFORMACIÓN] [NCLS-CORE-00101] [javax.enterprise.system.core] [tid: _ThreadID=20 _ThreadName=RunLevelControllerThread-1548578473692] [timeMillis: 1548578475450] [levelValue: 800] Network Listener http-listener started in: 39ms - bound to [/0.0.0.0:8080]
-
-[2019-01-27T03:41:15.454-0500] [] [INFORMACIÓN] [NCLS-CORE-00058] [javax.enterprise.system.core] [tid: _ThreadID=20 _ThreadName=RunLevelControllerThread-1548578473692] [timeMillis: 1548578475454] [levelValue: 800] Network listener https-listener on port 8443 disabled per domain.xml
-
-[2019-01-27T03:41:15.458-0500] [] [INFORMACIÓN] [NCLS-CORE-00087] [javax.enterprise.system.core] [tid: _ThreadID=20 _ThreadName=RunLevelControllerThread-1548578473692] [timeMillis: 1548578475458] [levelValue: 800] Grizzly 2.4.3 started in: 1.212ms - bound to [http-listener:8080]
-
-[2019-01-27T03:41:15.469-0500] [] [INFORMACIÓN] [NCLS-CORE-00017] [javax.enterprise.system.core] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578475469] [levelValue: 800] Payara Micro  5.184 #badassmicrofish (89) startup time : Embedded (3.554ms), startup services(1.794ms), total(5.348ms)
-
-[2019-01-27T03:41:16.251-0500] [] [INFORMACIÓN] [NCLS-JMX-00006] [javax.enterprise.system.jmx] [tid: _ThreadID=38 _ThreadName=Thread-6] [timeMillis: 1548578476251] [levelValue: 800] JMXStartupService has disabled JMXConnector system
-
-[2019-01-27T03:41:21.319-0500] [] [INFORMACIÓN] [NCLS-SECURITY-01002] [javax.enterprise.system.core.security] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578481319] [levelValue: 800] Java security manager is disabled.
-
-[2019-01-27T03:41:21.321-0500] [] [INFORMACIÓN] [NCLS-SECURITY-01010] [javax.enterprise.system.core.security] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578481321] [levelValue: 800] Entering Security Startup Service.
-
-[2019-01-27T03:41:21.325-0500] [] [INFORMACIÓN] [NCLS-SECURITY-01143] [javax.enterprise.system.core.security] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578481325] [levelValue: 800] Loading policy provider com.sun.enterprise.security.jacc.provider.SimplePolicyProvider.
-
-[2019-01-27T03:41:21.388-0500] [] [INFORMACIÓN] [NCLS-SECURITY-01011] [javax.enterprise.system.core.security] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578481388] [levelValue: 800] Security Service(s) started successfully.
-
-[2019-01-27T03:41:22.494-0500] [] [INFORMACIÓN] [AS-WEB-GLUE-00198] [javax.enterprise.web] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578482494] [levelValue: 800] Created HTTP listener http-listener on host/port 0.0.0.0:8080
-
-[2019-01-27T03:41:22.558-0500] [] [INFORMACIÓN] [AS-WEB-GLUE-00200] [javax.enterprise.web] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578482558] [levelValue: 800] Created virtual server server
-
-[2019-01-27T03:41:23.055-0500] [] [INFORMACIÓN] [AS-WEB-CORE-00306] [javax.enterprise.web.core] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578483055] [levelValue: 800] Setting JAAS app name glassfish-web
-
-[2019-01-27T03:41:23.058-0500] [] [INFORMACIÓN] [AS-WEB-GLUE-00201] [javax.enterprise.web] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578483058] [levelValue: 800] Virtual server server loaded default web module 
-
-[2019-01-27T03:41:32.153-0500] [] [INFORMACIÓN] [] [org.eclipse.persistence.session./file:/C:/Users/andres/AppData/Local/Temp/payaramicro-rt7258815394308191380tmp/applications/asdapi-web-1.0/WEB-INF/classes/_activos-pu] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578492153] [levelValue: 800] EclipseLink, version: Eclipse Persistence Services - 2.7.3.v20180807-4be1041
-
-[2019-01-27T03:41:33.987-0500] [] [INFORMACIÓN] [] [org.eclipse.persistence.session./file:/C:/Users/andres/AppData/Local/Temp/payaramicro-rt7258815394308191380tmp/applications/asdapi-web-1.0/WEB-INF/classes/_activos-pu.connection] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578493987] [levelValue: 800] /file:/C:/Users/andres/AppData/Local/Temp/payaramicro-rt7258815394308191380tmp/applications/asdapi-web-1.0/WEB-INF/classes/_activos-pu login successful
-
-[2019-01-27T03:41:34.364-0500] [] [INFO] [] [org.jboss.weld.Version] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578494364] [levelValue: 800] WELD-000900: 3.0.5 (p1)
-
-[2019-01-27T03:41:35.037-0500] [] [INFORMACIÓN] [AS-EJB-00054] [javax.enterprise.ejb.container] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578495037] [levelValue: 800] Portable JNDI names for EJB ActivosBean: [java:global/asdapi-web-1.0/ActivosBean!com.asd.api.ejb.activos.ActivosBeanLocal, java:global/asdapi-web-1.0/ActivosBean]
-
-[2019-01-27T03:41:35.093-0500] [] [INFORMACIÓN] [AS-EJB-00054] [javax.enterprise.ejb.container] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578495093] [levelValue: 800] Portable JNDI names for EJB I18n: [java:global/asdapi-web-1.0/I18n!com.asd.api.ejb.i18n.I18nLocal, java:global/asdapi-web-1.0/I18n]
-
-[2019-01-27T03:41:36.048-0500] [] [INFO] [] [org.jboss.weld.Event] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578496048] [levelValue: 800] WELD-000411: Observer method [BackedAnnotatedMethod] com.sun.jersey.server.impl.cdi.CDIExtension.processAnnotatedType(@Observes ProcessAnnotatedType<T>) receives events for all annotated types. Consider restricting events using @WithAnnotations or a generic type with bounds.
-
-[2019-01-27T03:41:38.744-0500] [] [INFORMACIÓN] [] [javax.enterprise.system.core] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578498744] [levelValue: 800] asdapi-web-1.0 was successfully deployed in 22.091 milliseconds.
-
-[2019-01-27T03:41:38.748-0500] [] [INFORMACIÓN] [] [PayaraMicro] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578498748] [levelValue: 800] Deployed 1 archive(s)
-
-[2019-01-27T03:41:39.621-0500] [] [INFORMACIÓN] [] [com.hazelcast.instance.AddressPicker] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578499621] [levelValue: 800] [LOCAL] [development] [3.11] Using bind address: /25.32.91.217:6900
-
-[2019-01-27T03:41:39.623-0500] [] [INFORMACIÓN] [] [com.hazelcast.instance.AddressPicker] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578499623] [levelValue: 800] [LOCAL] [development] [3.11] Using public address: /25.32.91.217:6900
-
-[2019-01-27T03:41:39.673-0500] [] [INFORMACIÓN] [] [com.hazelcast.system] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578499673] [levelValue: 800] [25.32.91.217]:6900 [development] [3.11] Hazelcast 3.11 (20181023 - 1500bbb) starting at [25.32.91.217]:6900
-
-[2019-01-27T03:41:39.674-0500] [] [INFORMACIÓN] [] [com.hazelcast.system] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578499674] [levelValue: 800] [25.32.91.217]:6900 [development] [3.11] Copyright (c) 2008-2018, Hazelcast, Inc. All Rights Reserved.
-
-[2019-01-27T03:41:39.675-0500] [] [INFORMACIÓN] [] [com.hazelcast.instance.Node] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578499675] [levelValue: 800] [25.32.91.217]:6900 [development] [3.11] A non-empty group password is configured for the Hazelcast member. Starting with Hazelcast version 3.8.2, members with the same group name, but with different group passwords (that do not use authentication) form a cluster. The group password configuration will be removed completely in a future release.
-
-[2019-01-27T03:41:40.545-0500] [] [INFORMACIÓN] [] [com.hazelcast.spi.impl.operationservice.impl.BackpressureRegulator] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578500545] [levelValue: 800] [25.32.91.217]:6900 [development] [3.11] Backpressure is disabled
-
-[2019-01-27T03:41:42.825-0500] [] [INFORMACIÓN] [] [com.hazelcast.instance.Node] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578502825] [levelValue: 800] [25.32.91.217]:6900 [development] [3.11] Creating MulticastJoiner
-
-[2019-01-27T03:41:43.306-0500] [] [INFORMACIÓN] [] [com.hazelcast.spi.impl.operationexecutor.impl.OperationExecutorImpl] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578503306] [levelValue: 800] [25.32.91.217]:6900 [development] [3.11] Starting 4 partition threads and 3 generic threads (1 dedicated for priority tasks)
-
-[2019-01-27T03:41:43.310-0500] [] [INFORMACIÓN] [] [com.hazelcast.internal.diagnostics.Diagnostics] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578503310] [levelValue: 800] [25.32.91.217]:6900 [development] [3.11] Diagnostics disabled. To enable add -Dhazelcast.diagnostics.enabled=true to the JVM arguments.
-
-[2019-01-27T03:41:43.323-0500] [] [INFORMACIÓN] [] [com.hazelcast.core.LifecycleService] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578503323] [levelValue: 800] [25.32.91.217]:6900 [development] [3.11] [25.32.91.217]:6900 is STARTING
-
-[2019-01-27T03:41:46.424-0500] [] [INFORMACIÓN] [] [com.hazelcast.internal.cluster.ClusterService] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578506424] [levelValue: 800] [25.32.91.217]:6900 [development] [3.11] 
-
-Members {size:1, ver:1} [
-	Member [25.32.91.217]:6900 - bbca04ed-35ec-4309-9db6-559c041c3307 this
-]
-
-
-[2019-01-27T03:41:46.477-0500] [] [INFORMACIÓN] [] [com.hazelcast.internal.jmx.ManagementService] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578506477] [levelValue: 800] [25.32.91.217]:6900 [development] [3.11] Hazelcast JMX agent enabled.
-
-[2019-01-27T03:41:46.519-0500] [] [INFORMACIÓN] [] [com.hazelcast.core.LifecycleService] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578506519] [levelValue: 800] [25.32.91.217]:6900 [development] [3.11] [25.32.91.217]:6900 is STARTED
-
-[2019-01-27T03:41:46.544-0500] [] [INFORMACIÓN] [] [fish.payara.nucleus.hazelcast.HazelcastCore] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578506544] [levelValue: 800] Hazelcast Instance Bound to JNDI at payara/Hazelcast
-
-[2019-01-27T03:41:46.545-0500] [] [INFORMACIÓN] [] [fish.payara.nucleus.hazelcast.HazelcastCore] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578506545] [levelValue: 800] JSR107 Caching Provider Bound to JNDI at payara/CachingProvider
-
-[2019-01-27T03:41:46.546-0500] [] [INFORMACIÓN] [] [fish.payara.nucleus.hazelcast.HazelcastCore] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578506546] [levelValue: 800] JSR107 Default Cache Manager Bound to JNDI at payara/CacheManager
-
-[2019-01-27T03:41:46.551-0500] [] [INFORMACIÓN] [] [fish.payara.nucleus.cluster.PayaraCluster] [tid: _ThreadID=26 _ThreadName=Executor-Service-3] [timeMillis: 1548578506551] [levelValue: 800] [[
-  Data Grid Status 
-Payara Data Grid State: DG Version: 35 DG Size: 1
-Instances: {
-Address: /25.32.91.217:6900 UUID: bbca04ed-35ec-4309-9db6-559c041c3307 Lite: false This: true Name: Charming-Featherback Group: MicroShoal
-}]]
-
-[2019-01-27T03:41:46.632-0500] [] [INFORMACIÓN] [AS-WEB-GLUE-00130] [javax.enterprise.web] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578506632] [levelValue: 800] Invalid Session Management Configuration for non-distributable app [asdapi-web-1.0] - defaulting to memory: persistence-type = [hazelcast] / persistenceFrequency = [web-method] / persistenceScope = [modified-session]
-
-[2019-01-27T03:41:46.705-0500] [] [INFORMACIÓN] [] [com.hazelcast.internal.partition.impl.PartitionStateManager] [tid: _ThreadID=25 _ThreadName=Executor-Service-2] [timeMillis: 1548578506705] [levelValue: 800] [25.32.91.217]:6900 [development] [3.11] Initializing cluster partition table arrangement...
-
-[2019-01-27T03:41:47.187-0500] [] [INFORMACIÓN] [] [org.glassfish.soteria.servlet.SamRegistrationInstaller] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578507187] [levelValue: 800] Initializing Soteria 1.1-b01 for context '/asd'
-
-[2019-01-27T03:41:47.862-0500] [] [INFORMACIÓN] [] [com.hazelcast.internal.diagnostics.HealthMonitor] [tid: _ThreadID=82 _ThreadName=hz._hzInstance_1_development.HealthMonitor] [timeMillis: 1548578507862] [levelValue: 800] [25.32.91.217]:6900 [development] [3.11] processors=4, physical.memory.total=15,9G, physical.memory.free=4,4G, swap.space.total=24,5G, swap.space.free=3,8G, heap.memory.used=898,3M, heap.memory.free=470,2M, heap.memory.total=1,3G, heap.memory.max=3,5G, heap.memory.used/total=65,64%, heap.memory.used/max=24,74%, minor.gc.count=14, minor.gc.time=360ms, major.gc.count=3, major.gc.time=444ms, load.process=45,15%, load.system=100,00%, load.systemAverage=n/a thread.count=93, thread.peakCount=93, cluster.timeDiff=0, event.q.size=0, executor.q.async.size=0, executor.q.client.size=0, executor.q.query.size=0, executor.q.scheduled.size=0, executor.q.io.size=0, executor.q.system.size=0, executor.q.operations.size=0, executor.q.priorityOperation.size=0, operations.completed.count=6, executor.q.mapLoad.size=0, executor.q.mapLoadAllKeys.size=0, executor.q.cluster.size=0, executor.q.response.size=0, operations.running.count=0, operations.pending.invocations.percentage=0,00%, operations.pending.invocations.count=0, proxy.count=0, clientEndpoint.count=0, connection.active.count=0, client.connection.count=0, connection.count=0
-
-[2019-01-27T03:41:49.106-0500] [] [INFORMACIÓN] [] [com.sun.jersey.api.core.servlet.WebAppResourceConfig] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578509106] [levelValue: 800] Scanning for root resource and provider classes in the Web app resource paths:
-  /WEB-INF/lib
-  /WEB-INF/classes
-
-[2019-01-27T03:41:49.914-0500] [] [INFORMACIÓN] [] [com.sun.jersey.api.core.ScanningResourceConfig] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578509914] [levelValue: 800] Root resource classes found:
-  class com.asd.api.rest.activos.servicios.ServicioActivos
-
-[2019-01-27T03:41:49.917-0500] [] [INFORMACIÓN] [] [com.sun.jersey.api.core.ScanningResourceConfig] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578509917] [levelValue: 800] No provider classes found.
-
-[2019-01-27T03:41:50.168-0500] [] [INFORMACIÓN] [] [com.sun.jersey.server.impl.cdi.CDIComponentProviderFactoryInitializer] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578510168] [levelValue: 800] CDI support is enabled
-
-[2019-01-27T03:41:50.205-0500] [] [INFORMACIÓN] [] [com.sun.jersey.server.impl.application.WebApplicationImpl] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578510205] [levelValue: 800] Initiating Jersey application, version 'Jersey: 1.19 02/11/2015 05:39 AM'
-
-[2019-01-27T03:41:52.074-0500] [] [INFORMACIÓN] [AS-WEB-GLUE-00172] [javax.enterprise.web] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578512074] [levelValue: 800] Loading application [asdapi-web-1.0] at [/asd]
-
-[2019-01-27T03:41:56.985-0500] [] [INFORMACIÓN] [] [PayaraMicro] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578516985] [levelValue: 800] 
-{
-    "Instance Configuration": {
-        "Host": "andres-pc",
-        "Http Port(s)": "8080",
-        "Https Port(s)": "",
-        "Instance Name": "Charming-Featherback",
-        "Instance Group": "MicroShoal",
-        "Hazelcast Member UUID": "bbca04ed-35ec-4309-9db6-559c041c3307",
-        "Deployed": [
-            {
-                "Name": "asdapi-web-1.0",
-                "Type": "war",
-                "Context Root": "/asd"
-            }
-        ]
-    }
-}
-
-[2019-01-27T03:41:56.994-0500] [] [INFORMACIÓN] [] [PayaraMicro] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578516994] [levelValue: 800] 
-Payara Micro URLs:
-http://andres-pc:8080/asd
-
-
-
-[2019-01-27T03:41:56.999-0500] [] [INFORMACIÓN] [] [PayaraMicro] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548578516999] [levelValue: 800] Payara Micro  5.184 #badassmicrofish (build 89) ready in 42.800 (ms)
-
-[2019-01-27T03:42:07.993-0500] [] [INFORMACIÓN] [] [com.hazelcast.internal.diagnostics.HealthMonitor] [tid: _ThreadID=82 _ThreadName=hz._hzInstance_1_development.HealthMonitor] [timeMillis: 1548578527993] [levelValue: 800] [25.32.91.217]:6900 [development] [3.11] processors=4, physical.memory.total=15,9G, physical.memory.free=4,0G, swap.space.total=24,5G, swap.space.free=3,5G, heap.memory.used=93,5M, heap.memory.free=1,4G, heap.memory.total=1,5G, heap.memory.max=3,5G, heap.memory.used/total=6,03%, heap.memory.used/max=2,58%, minor.gc.count=16, minor.gc.time=521ms, major.gc.count=4, major.gc.time=794ms, load.process=15,33%, load.system=73,21%, load.systemAverage=n/a thread.count=96, thread.peakCount=97, cluster.timeDiff=0, event.q.size=0, executor.q.async.size=0, executor.q.client.size=0, executor.q.query.size=0, executor.q.scheduled.size=0, executor.q.io.size=0, executor.q.system.size=0, executor.q.operations.size=0, executor.q.priorityOperation.size=0, operations.completed.count=17, executor.q.mapLoad.size=0, executor.q.mapLoadAllKeys.size=0, executor.q.cluster.size=0, executor.q.response.size=0, operations.running.count=0, operations.pending.invocations.percentage=0,00%, operations.pending.invocations.count=0, proxy.count=0, clientEndpoint.count=0, connection.active.count=0, client.connection.count=0, connection.count=0
-
-[2019-01-27T03:44:25.728-0500] [] [INFORMACIÓN] [] [com.hazelcast.instance.Node] [tid: _ThreadID=64 _ThreadName=hz.ShutdownThread] [timeMillis: 1548578665728] [levelValue: 800] [25.32.91.217]:6900 [development] [3.11] Running shutdown hook... Current state: ACTIVE
+[2019-01-27T18:25:03.988-0500] [] [INFORMACIÓN] [] [com.hazelcast.instance.Node] [tid: _ThreadID=73 _ThreadName=hz.ShutdownThread] [timeMillis: 1548631503988] [levelValue: 800] [25.32.91.217]:6900 [development] [3.11] Running shutdown hook... Current state: ACTIVE
 
