@@ -95,4 +95,20 @@ public interface ActivosBeanLocal {
     public PersonasResponseDto obtenerPersonas();
     
     
+    /**
+     * Implementacion de funcion que crea un registro en la tipo activos
+     * fijos
+     *
+     * @param tipo
+     */
+
+    public void crearTipo(Tipo tipo);
+    
+    /**
+     * Implementacion de funcion que crea un registro en la estado activos
+     * fijos
+     *
+     * @param estadoActual
+     */
+    public void crearEstadoActual(EstadoActual estadoActual);
 }
