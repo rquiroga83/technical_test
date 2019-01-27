@@ -369,4 +369,28 @@ public class ActivosBean implements ActivosBeanLocal {
     }
 
     
+    /**
+     * Implementacion de funcion que crea un registro en la tipo activos
+     * fijos
+     *
+     * @param tipo
+     */
+    @Override
+    public void crearTipo(Tipo tipo) {
+        em.persist(tipo);
+    }
+    
+    
+    /**
+     * Implementacion de funcion que crea un registro en la estado activos
+     * fijos
+     *
+     * @param estadoActual
+     */
+    @Override
+    public void crearEstadoActual(EstadoActual estadoActual) {
+        em.persist(estadoActual);
+    }
+
+    
 }
