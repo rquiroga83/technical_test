@@ -94,4 +94,5 @@ public interface ActivosBeanLocal {
      */
     public PersonasResponseDto obtenerPersonas();
     
+    
 }

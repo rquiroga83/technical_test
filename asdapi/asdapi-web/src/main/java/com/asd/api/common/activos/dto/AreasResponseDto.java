@@ -41,4 +41,5 @@ public class AreasResponseDto {
     public void setResult(ResultDto result) {
         this.result = result;
     }
+    
 }
