@@ -17,5 +17,9 @@ import javax.ejb.Local;
 @Local
 public interface ActivosBeanLocal {
     
- 
+ /**
+     * Funcion que extrae listado completo de activos
+     * @return ActivosResponseDto
+     */
+    public ActivosResponseDto obtenerActivos();  
 }
