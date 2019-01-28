@@ -16,6 +16,10 @@ import javax.ws.rs.core.HttpHeaders;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.ext.Provider;
 
+/**
+ * Filtro para aseguramiento del servicio por token
+ * @author andres
+ */
 @Secured
 @Provider
 @Priority(Priorities.AUTHENTICATION)
