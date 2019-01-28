@@ -5,6 +5,7 @@
  */
 package com.asd.api.rest.activos.servicios;
 
+import com.asd.api.anotations.Secured;
 import com.asd.api.common.activos.constantes.ConstantesAplicacion;
 import com.asd.api.common.activos.dto.ActivosResponseDto;
 import com.asd.api.common.activos.dto.AreasResponseDto;
@@ -364,6 +365,7 @@ public class ServicioActivos {
      * @return
      */
     @POST
+    @Secured
     @Path("/actualizarActivoFijo")
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
@@ -384,6 +386,7 @@ public class ServicioActivos {
             @FormParam("fecha_baja") String fechaBaja,
             @Context HttpServletResponse servletResponse) {
 
+        System.out.println("Invoca sericio");
         establecerCabeceras();
         try {
             Date dFechaBaja = new java.sql.Date(df.parse(fechaBaja).getTime());
@@ -470,6 +473,7 @@ public class ServicioActivos {
      */
     @Path("/obtenerPersonas")
     @GET
+    @Secured
     @Produces({MediaType.APPLICATION_JSON})
     @Operation(summary = "Obtiene todas las personas",
     tags = {"areas"},
