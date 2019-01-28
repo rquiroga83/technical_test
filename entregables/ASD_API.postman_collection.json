@@ -1,0 +1,1040 @@
+{
+	"info": {
+		"_postman_id": "bb0e203d-1d4a-f425-2c7a-1fad52a6e42a",
+		"name": "ASD_API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/asd/services/servicioActivos/obtenerActivosFijos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/asd/services/servicioActivos/obtenerActivosFijos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"asd",
+						"services",
+						"servicioActivos",
+						"obtenerActivosFijos"
+					]
+				},
+				"description": "Test obtenerActivosFijos"
+			},
+			"response": [
+				{
+					"name": "obtenerActivosFijos",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/api-web/services/servicioActivos/obtenerActivosFijos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api-web",
+								"services",
+								"servicioActivos",
+								"obtenerActivosFijos"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*",
+							"name": "Access-Control-Allow-Origin",
+							"description": ""
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": ""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 26 Apr 2017 20:10:59 GMT",
+							"name": "Date",
+							"description": ""
+						},
+						{
+							"key": "Server",
+							"value": "GlassFish Server Open Source Edition  4.1.2",
+							"name": "Server",
+							"description": ""
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"name": "Transfer-Encoding",
+							"description": ""
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Servlet/3.1 JSP/2.3 (GlassFish Server Open Source Edition  4.1.2  Java/Oracle Corporation/1.7)",
+							"name": "X-Powered-By",
+							"description": ""
+						}
+					],
+					"cookie": [],
+					"body": "{\"activosFijos\":{\"activoFijo\":{\"alto\":\"11.0\",\"ancho\":\"15.2\",\"descripcion\":\"activo de prueba\",\"estadoActualId\":{\"estado\":\"activo\",\"id\":\"1\"},\"fechaBaja\":\"2017-04-26T00:00:00-05:00\",\"fechaCompra\":\"2017-04-26T00:00:00-05:00\",\"id\":\"1\",\"largo\":\"15.1\",\"nombre\":\"activo1\",\"numeroInternoInventario\":\"123456\",\"peso\":\"10.2\",\"serial\":\"123456\",\"tipoId\":{\"id\":\"1\",\"nombre\":\"maquinaria\"},\"valorCompra\":\"55600\"}},\"result\":{\"resultCode\":\"200\",\"resultMsg\":\"Consulta realizada correctamente\"}}"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:8080/asd/services/servicioActivos/crearActivoFijo",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "nombre",
+							"value": "computador",
+							"type": "text"
+						},
+						{
+							"key": "descripcion",
+							"value": "computador oficina chico",
+							"type": "text"
+						},
+						{
+							"key": "serial",
+							"value": "1234567",
+							"type": "text"
+						},
+						{
+							"key": "numero_interno_inventario",
+							"value": "1234567",
+							"type": "text"
+						},
+						{
+							"key": "peso",
+							"value": "11.4",
+							"type": "text"
+						},
+						{
+							"key": "alto",
+							"value": "12.3",
+							"type": "text"
+						},
+						{
+							"key": "ancho",
+							"value": "12.3",
+							"type": "text"
+						},
+						{
+							"key": "largo",
+							"value": "58.3",
+							"type": "text"
+						},
+						{
+							"key": "valor_compra",
+							"value": "56000",
+							"type": "text"
+						},
+						{
+							"key": "fecha_compra",
+							"value": "2015-04-01",
+							"type": "text"
+						},
+						{
+							"key": "fecha_baja",
+							"value": "2015-04-01",
+							"type": "text"
+						},
+						{
+							"key": "tipo_id",
+							"value": "1",
+							"type": "text"
+						},
+						{
+							"key": "estado_actual_id",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/asd/services/servicioActivos/crearActivoFijo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"asd",
+						"services",
+						"servicioActivos",
+						"crearActivoFijo"
+					]
+				},
+				"description": "Test de creacion de activo fijo"
+			},
+			"response": [
+				{
+					"name": "crearActivoFijo",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"type": "text",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nombre",
+									"value": "computador",
+									"type": "text"
+								},
+								{
+									"key": "descripcion",
+									"value": "computador oficina chico",
+									"type": "text"
+								},
+								{
+									"key": "serial",
+									"value": "1234567",
+									"type": "text"
+								},
+								{
+									"key": "numero_interno_inventario",
+									"value": "1234567",
+									"type": "text"
+								},
+								{
+									"key": "peso",
+									"value": "11.4",
+									"type": "text"
+								},
+								{
+									"key": "alto",
+									"value": "12.3",
+									"type": "text"
+								},
+								{
+									"key": "ancho",
+									"value": "12.3",
+									"type": "text"
+								},
+								{
+									"key": "largo",
+									"value": "58.3",
+									"type": "text"
+								},
+								{
+									"key": "valor_compra",
+									"value": "56000",
+									"type": "text"
+								},
+								{
+									"key": "fecha_compra",
+									"value": "2015-04-01",
+									"type": "text"
+								},
+								{
+									"key": "fecha_baja",
+									"value": "2015-04-01",
+									"type": "text"
+								},
+								{
+									"key": "tipo_id",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "estado_actual_id",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/api-web/services/servicioActivos/crearActivoFijo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api-web",
+								"services",
+								"servicioActivos",
+								"crearActivoFijo"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*",
+							"name": "Access-Control-Allow-Origin",
+							"description": ""
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": ""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 26 Apr 2017 21:34:05 GMT",
+							"name": "Date",
+							"description": ""
+						},
+						{
+							"key": "Server",
+							"value": "GlassFish Server Open Source Edition  4.1.2",
+							"name": "Server",
+							"description": ""
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"name": "Transfer-Encoding",
+							"description": ""
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Servlet/3.1 JSP/2.3 (GlassFish Server Open Source Edition  4.1.2  Java/Oracle Corporation/1.7)",
+							"name": "X-Powered-By",
+							"description": ""
+						}
+					],
+					"cookie": [],
+					"body": "{\"result\":{\"resultCode\":\"200\",\"resultMsg\":\"Datos actualizados correctamente\"}}"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:8080/asdb/services/servicioActivos/actualizarActivoFijo",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "id",
+							"value": "2",
+							"type": "text"
+						},
+						{
+							"key": "fecha_baja",
+							"value": "2014-04-0",
+							"type": "text"
+						},
+						{
+							"key": "numero_interno_inventario",
+							"value": "44512255",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/asd/services/servicioActivos/actualizarActivoFijo",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"asd",
+						"services",
+						"servicioActivos",
+						"actualizarActivoFijo"
+					]
+				},
+				"description": "Funcion que actualiza activo fijo"
+			},
+			"response": [
+				{
+					"name": "actualizarActivoFijo",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "id",
+									"value": "2",
+									"type": "text"
+								},
+								{
+									"key": "fecha_baja",
+									"value": "2014-04-0",
+									"type": "text"
+								},
+								{
+									"key": "numero_interno_inventario",
+									"value": "44512255",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/api-web/services/servicioActivos/actualizarActivoFijo",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api-web",
+								"services",
+								"servicioActivos",
+								"actualizarActivoFijo"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*",
+							"name": "Access-Control-Allow-Origin",
+							"description": ""
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": ""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 26 Apr 2017 22:11:42 GMT",
+							"name": "Date",
+							"description": ""
+						},
+						{
+							"key": "Server",
+							"value": "GlassFish Server Open Source Edition  4.1.2",
+							"name": "Server",
+							"description": ""
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"name": "Transfer-Encoding",
+							"description": ""
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Servlet/3.1 JSP/2.3 (GlassFish Server Open Source Edition  4.1.2  Java/Oracle Corporation/1.7)",
+							"name": "X-Powered-By",
+							"description": ""
+						}
+					],
+					"cookie": [],
+					"body": "{\"result\":{\"resultCode\":\"200\",\"resultMsg\":\"Datos actualizados correctamente\"}}"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:8080/asd/services/servicioActivos/obtenerActivosFijos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/asd/services/servicioActivos/obtenerActivosFijos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"asd",
+						"services",
+						"servicioActivos",
+						"obtenerActivosFijos"
+					]
+				},
+				"description": "Funcion de obtencion de activos fijos"
+			},
+			"response": [
+				{
+					"name": "obtenerActivosFijos",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/api-web/services/servicioActivos/obtenerActivosFijos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api-web",
+								"services",
+								"servicioActivos",
+								"obtenerActivosFijos"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*",
+							"name": "Access-Control-Allow-Origin",
+							"description": ""
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": ""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 26 Apr 2017 22:12:19 GMT",
+							"name": "Date",
+							"description": ""
+						},
+						{
+							"key": "Server",
+							"value": "GlassFish Server Open Source Edition  4.1.2",
+							"name": "Server",
+							"description": ""
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"name": "Transfer-Encoding",
+							"description": ""
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Servlet/3.1 JSP/2.3 (GlassFish Server Open Source Edition  4.1.2  Java/Oracle Corporation/1.7)",
+							"name": "X-Powered-By",
+							"description": ""
+						}
+					],
+					"cookie": [],
+					"body": "{\"activosFijos\":{\"activoFijo\":[{\"alto\":\"11.0\",\"ancho\":\"15.2\",\"descripcion\":\"activo de prueba\",\"estadoActualId\":{\"estado\":\"activo\",\"id\":\"1\"},\"fechaBaja\":\"2014-04-01T00:00:00-05:00\",\"fechaCompra\":\"2017-04-26T00:00:00-05:00\",\"id\":\"1\",\"largo\":\"15.1\",\"nombre\":\"activo1\",\"numeroInternoInventario\":\"12354789\",\"peso\":\"10.2\",\"serial\":\"123456\",\"tipoId\":{\"id\":\"1\",\"nombre\":\"maquinaria\"},\"valorCompra\":\"55600\"},{\"alto\":\"12.3\",\"ancho\":\"12.3\",\"descripcion\":\"computador oficina chico\",\"estadoActualId\":{\"estado\":\"activo\",\"id\":\"1\"},\"fechaBaja\":\"2014-03-31T00:00:00-05:00\",\"fechaCompra\":\"2015-04-01T00:00:00-05:00\",\"id\":\"2\",\"largo\":\"58.3\",\"nombre\":\"computador\",\"numeroInternoInventario\":\"44512255\",\"peso\":\"11.4\",\"serial\":\"1234567\",\"tipoId\":{\"id\":\"1\",\"nombre\":\"maquinaria\"},\"valorCompra\":\"56000\"}]},\"result\":{\"resultCode\":\"200\",\"resultMsg\":\"Consulta realizada correctamente\"}}"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:8080/asd/services/servicioActivos/obtenerActivosFijosSerial?serial=123456",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/asd/services/servicioActivos/obtenerActivosFijosSerial?serial=1234567",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"asd",
+						"services",
+						"servicioActivos",
+						"obtenerActivosFijosSerial"
+					],
+					"query": [
+						{
+							"key": "serial",
+							"value": "1234567"
+						}
+					]
+				},
+				"description": "Busqueda por serial"
+			},
+			"response": [
+				{
+					"name": "obtenerActivosFijosSerial?serial=123456",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/api-web/services/servicioActivos/obtenerActivosFijosSerial?serial=123456",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api-web",
+								"services",
+								"servicioActivos",
+								"obtenerActivosFijosSerial"
+							],
+							"query": [
+								{
+									"key": "serial",
+									"value": "123456"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*",
+							"name": "Access-Control-Allow-Origin",
+							"description": ""
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": ""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 26 Apr 2017 22:12:38 GMT",
+							"name": "Date",
+							"description": ""
+						},
+						{
+							"key": "Server",
+							"value": "GlassFish Server Open Source Edition  4.1.2",
+							"name": "Server",
+							"description": ""
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"name": "Transfer-Encoding",
+							"description": ""
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Servlet/3.1 JSP/2.3 (GlassFish Server Open Source Edition  4.1.2  Java/Oracle Corporation/1.7)",
+							"name": "X-Powered-By",
+							"description": ""
+						}
+					],
+					"cookie": [],
+					"body": "{\"activosFijos\":{\"activoFijo\":{\"alto\":\"11.0\",\"ancho\":\"15.2\",\"descripcion\":\"activo de prueba\",\"estadoActualId\":{\"estado\":\"activo\",\"id\":\"1\"},\"fechaBaja\":\"2014-04-01T00:00:00-05:00\",\"fechaCompra\":\"2017-04-26T00:00:00-05:00\",\"id\":\"1\",\"largo\":\"15.1\",\"nombre\":\"activo1\",\"numeroInternoInventario\":\"12354789\",\"peso\":\"10.2\",\"serial\":\"123456\",\"tipoId\":{\"id\":\"1\",\"nombre\":\"maquinaria\"},\"valorCompra\":\"55600\"}},\"result\":{\"resultCode\":\"200\",\"resultMsg\":\"Consulta realizada correctamente\"}}"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:8080/asd/services/servicioActivos/obtenerActivosFijosIdTipo?idTipo=1",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/asd/services/servicioActivos/obtenerActivosFijosIdTipo?idTipo=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"asd",
+						"services",
+						"servicioActivos",
+						"obtenerActivosFijosIdTipo"
+					],
+					"query": [
+						{
+							"key": "idTipo",
+							"value": "1"
+						}
+					]
+				},
+				"description": "Busqueda por tipo"
+			},
+			"response": [
+				{
+					"name": "idTipo=1",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/api-web/services/servicioActivos/obtenerActivosFijosIdTipo?idTipo=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api-web",
+								"services",
+								"servicioActivos",
+								"obtenerActivosFijosIdTipo"
+							],
+							"query": [
+								{
+									"key": "idTipo",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*",
+							"name": "Access-Control-Allow-Origin",
+							"description": ""
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": ""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 26 Apr 2017 22:12:59 GMT",
+							"name": "Date",
+							"description": ""
+						},
+						{
+							"key": "Server",
+							"value": "GlassFish Server Open Source Edition  4.1.2",
+							"name": "Server",
+							"description": ""
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"name": "Transfer-Encoding",
+							"description": ""
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Servlet/3.1 JSP/2.3 (GlassFish Server Open Source Edition  4.1.2  Java/Oracle Corporation/1.7)",
+							"name": "X-Powered-By",
+							"description": ""
+						}
+					],
+					"cookie": [],
+					"body": "{\"activosFijos\":{\"activoFijo\":[{\"alto\":\"11.0\",\"ancho\":\"15.2\",\"descripcion\":\"activo de prueba\",\"estadoActualId\":{\"estado\":\"activo\",\"id\":\"1\"},\"fechaBaja\":\"2014-04-01T00:00:00-05:00\",\"fechaCompra\":\"2017-04-26T00:00:00-05:00\",\"id\":\"1\",\"largo\":\"15.1\",\"nombre\":\"activo1\",\"numeroInternoInventario\":\"12354789\",\"peso\":\"10.2\",\"serial\":\"123456\",\"tipoId\":{\"id\":\"1\",\"nombre\":\"maquinaria\"},\"valorCompra\":\"55600\"},{\"alto\":\"12.3\",\"ancho\":\"12.3\",\"descripcion\":\"computador oficina chico\",\"estadoActualId\":{\"estado\":\"activo\",\"id\":\"1\"},\"fechaBaja\":\"2014-03-31T00:00:00-05:00\",\"fechaCompra\":\"2015-04-01T00:00:00-05:00\",\"id\":\"2\",\"largo\":\"58.3\",\"nombre\":\"computador\",\"numeroInternoInventario\":\"44512255\",\"peso\":\"11.4\",\"serial\":\"1234567\",\"tipoId\":{\"id\":\"1\",\"nombre\":\"maquinaria\"},\"valorCompra\":\"56000\"}]},\"result\":{\"resultCode\":\"200\",\"resultMsg\":\"Consulta realizada correctamente\"}}"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:8080/asd/services/servicioActivos/obtenerActivosFijosFechaCompra?fechaCompra=2017-00-01",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/asd/services/servicioActivos/obtenerActivosFijosFechaCompra?fechaCompra=2017-04-26",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"asd",
+						"services",
+						"servicioActivos",
+						"obtenerActivosFijosFechaCompra"
+					],
+					"query": [
+						{
+							"key": "fechaCompra",
+							"value": "2017-04-26"
+						}
+					]
+				},
+				"description": "Busqueda por fecha"
+			},
+			"response": [
+				{
+					"name": "fechaCompra=2017-04-26",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/api-web/services/servicioActivos/obtenerActivosFijosFechaCompra?fechaCompra=2017-04-26",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api-web",
+								"services",
+								"servicioActivos",
+								"obtenerActivosFijosFechaCompra"
+							],
+							"query": [
+								{
+									"key": "fechaCompra",
+									"value": "2017-04-26"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*",
+							"name": "Access-Control-Allow-Origin",
+							"description": ""
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": ""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 26 Apr 2017 22:14:06 GMT",
+							"name": "Date",
+							"description": ""
+						},
+						{
+							"key": "Server",
+							"value": "GlassFish Server Open Source Edition  4.1.2",
+							"name": "Server",
+							"description": ""
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"name": "Transfer-Encoding",
+							"description": ""
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Servlet/3.1 JSP/2.3 (GlassFish Server Open Source Edition  4.1.2  Java/Oracle Corporation/1.7)",
+							"name": "X-Powered-By",
+							"description": ""
+						}
+					],
+					"cookie": [],
+					"body": "{\"activosFijos\":{\"activoFijo\":{\"alto\":\"11.0\",\"ancho\":\"15.2\",\"descripcion\":\"activo de prueba\",\"estadoActualId\":{\"estado\":\"activo\",\"id\":\"1\"},\"fechaBaja\":\"2014-04-01T00:00:00-05:00\",\"fechaCompra\":\"2017-04-26T00:00:00-05:00\",\"id\":\"1\",\"largo\":\"15.1\",\"nombre\":\"activo1\",\"numeroInternoInventario\":\"12354789\",\"peso\":\"10.2\",\"serial\":\"123456\",\"tipoId\":{\"id\":\"1\",\"nombre\":\"maquinaria\"},\"valorCompra\":\"55600\"}},\"result\":{\"resultCode\":\"200\",\"resultMsg\":\"Consulta realizada correctamente\"}}"
+				},
+				{
+					"name": "fechaCompra=2017-04-26",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/api-web/services/servicioActivos/obtenerActivosFijosFechaCompra?fechaCompra=2017-04-26",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api-web",
+								"services",
+								"servicioActivos",
+								"obtenerActivosFijosFechaCompra"
+							],
+							"query": [
+								{
+									"key": "fechaCompra",
+									"value": "2017-04-26"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*",
+							"name": "Access-Control-Allow-Origin",
+							"description": ""
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": ""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 26 Apr 2017 22:14:06 GMT",
+							"name": "Date",
+							"description": ""
+						},
+						{
+							"key": "Server",
+							"value": "GlassFish Server Open Source Edition  4.1.2",
+							"name": "Server",
+							"description": ""
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"name": "Transfer-Encoding",
+							"description": ""
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "Servlet/3.1 JSP/2.3 (GlassFish Server Open Source Edition  4.1.2  Java/Oracle Corporation/1.7)",
+							"name": "X-Powered-By",
+							"description": ""
+						}
+					],
+					"cookie": [],
+					"body": "{\"activosFijos\":{\"activoFijo\":{\"alto\":\"11.0\",\"ancho\":\"15.2\",\"descripcion\":\"activo de prueba\",\"estadoActualId\":{\"estado\":\"activo\",\"id\":\"1\"},\"fechaBaja\":\"2014-04-01T00:00:00-05:00\",\"fechaCompra\":\"2017-04-26T00:00:00-05:00\",\"id\":\"1\",\"largo\":\"15.1\",\"nombre\":\"activo1\",\"numeroInternoInventario\":\"12354789\",\"peso\":\"10.2\",\"serial\":\"123456\",\"tipoId\":{\"id\":\"1\",\"nombre\":\"maquinaria\"},\"valorCompra\":\"55600\"}},\"result\":{\"resultCode\":\"200\",\"resultMsg\":\"Consulta realizada correctamente\"}}"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:8080/asd/services/servicioActivos/obtenerAreas",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "1234562",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/asd/services/servicioActivos/obtenerAreas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"asd",
+						"services",
+						"servicioActivos",
+						"obtenerAreas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/asd/services/servicioActivos/obtenerPersonas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/asd/services/servicioActivos/obtenerPersonas",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"asd",
+						"services",
+						"servicioActivos",
+						"obtenerPersonas"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

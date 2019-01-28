@@ -386,7 +386,6 @@ public class ServicioActivos {
             @FormParam("fecha_baja") String fechaBaja,
             @Context HttpServletResponse servletResponse) {
 
-        System.out.println("Invoca sericio");
         establecerCabeceras();
         try {
             Date dFechaBaja = new java.sql.Date(df.parse(fechaBaja).getTime());

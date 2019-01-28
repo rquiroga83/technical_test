@@ -1,174 +1,130 @@
-[2019-01-27T23:40:56.075-0500] [] [INFORMACIÓN] [] [com.hazelcast.internal.diagnostics.HealthMonitor] [tid: _ThreadID=89 _ThreadName=hz._hzInstance_1_development.HealthMonitor] [timeMillis: 1548650456075] [levelValue: 800] [25.32.91.217]:6900 [development] [3.11] processors=4, physical.memory.total=15,9G, physical.memory.free=4,7G, swap.space.total=25,1G, swap.space.free=6,0G, heap.memory.used=220,9M, heap.memory.free=1,3G, heap.memory.total=1,5G, heap.memory.max=3,5G, heap.memory.used/total=14,30%, heap.memory.used/max=6,08%, minor.gc.count=16, minor.gc.time=511ms, major.gc.count=4, major.gc.time=957ms, load.process=0,31%, load.system=100,00%, load.systemAverage=n/a thread.count=71, thread.peakCount=111, cluster.timeDiff=0, event.q.size=0, executor.q.async.size=0, executor.q.client.size=0, executor.q.query.size=0, executor.q.scheduled.size=0, executor.q.io.size=0, executor.q.system.size=0, executor.q.operations.size=0, executor.q.priorityOperation.size=0, operations.completed.count=17, executor.q.mapLoad.size=0, executor.q.mapLoadAllKeys.size=0, executor.q.cluster.size=0, executor.q.response.size=0, operations.running.count=0, operations.pending.invocations.percentage=0,00%, operations.pending.invocations.count=0, proxy.count=0, clientEndpoint.count=0, connection.active.count=0, client.connection.count=0, connection.count=0
-
-[2019-01-27T23:41:16.193-0500] [] [INFORMACIÓN] [] [com.hazelcast.internal.diagnostics.HealthMonitor] [tid: _ThreadID=89 _ThreadName=hz._hzInstance_1_development.HealthMonitor] [timeMillis: 1548650476193] [levelValue: 800] [25.32.91.217]:6900 [development] [3.11] processors=4, physical.memory.total=15,9G, physical.memory.free=4,4G, swap.space.total=25,1G, swap.space.free=5,5G, heap.memory.used=220,9M, heap.memory.free=1,3G, heap.memory.total=1,5G, heap.memory.max=3,5G, heap.memory.used/total=14,30%, heap.memory.used/max=6,08%, minor.gc.count=16, minor.gc.time=511ms, major.gc.count=4, major.gc.time=957ms, load.process=0,25%, load.system=100,00%, load.systemAverage=n/a thread.count=71, thread.peakCount=111, cluster.timeDiff=0, event.q.size=0, executor.q.async.size=0, executor.q.client.size=0, executor.q.query.size=0, executor.q.scheduled.size=0, executor.q.io.size=0, executor.q.system.size=0, executor.q.operations.size=0, executor.q.priorityOperation.size=0, operations.completed.count=17, executor.q.mapLoad.size=0, executor.q.mapLoadAllKeys.size=0, executor.q.cluster.size=0, executor.q.response.size=0, operations.running.count=0, operations.pending.invocations.percentage=0,00%, operations.pending.invocations.count=0, proxy.count=0, clientEndpoint.count=0, connection.active.count=0, client.connection.count=0, connection.count=0
-
-[2019-01-27T23:41:36.309-0500] [] [INFORMACIÓN] [] [com.hazelcast.internal.diagnostics.HealthMonitor] [tid: _ThreadID=89 _ThreadName=hz._hzInstance_1_development.HealthMonitor] [timeMillis: 1548650496309] [levelValue: 800] [25.32.91.217]:6900 [development] [3.11] processors=4, physical.memory.total=15,9G, physical.memory.free=4,7G, swap.space.total=25,1G, swap.space.free=6,0G, heap.memory.used=220,9M, heap.memory.free=1,3G, heap.memory.total=1,5G, heap.memory.max=3,5G, heap.memory.used/total=14,30%, heap.memory.used/max=6,08%, minor.gc.count=16, minor.gc.time=511ms, major.gc.count=4, major.gc.time=957ms, load.process=0,19%, load.system=100,00%, load.systemAverage=n/a thread.count=71, thread.peakCount=111, cluster.timeDiff=0, event.q.size=0, executor.q.async.size=0, executor.q.client.size=0, executor.q.query.size=0, executor.q.scheduled.size=0, executor.q.io.size=0, executor.q.system.size=0, executor.q.operations.size=0, executor.q.priorityOperation.size=0, operations.completed.count=17, executor.q.mapLoad.size=0, executor.q.mapLoadAllKeys.size=0, executor.q.cluster.size=0, executor.q.response.size=0, operations.running.count=0, operations.pending.invocations.percentage=0,00%, operations.pending.invocations.count=0, proxy.count=0, clientEndpoint.count=0, connection.active.count=0, client.connection.count=0, connection.count=0
-
-[2019-01-27T23:41:41.966-0500] [] [INFORMACIÓN] [] [com.hazelcast.instance.Node] [tid: _ThreadID=71 _ThreadName=hz.ShutdownThread] [timeMillis: 1548650501966] [levelValue: 800] [25.32.91.217]:6900 [development] [3.11] Running shutdown hook... Current state: ACTIVE
-
-[2019-01-27T23:43:36.334-0500] [] [ADVERTENCIA] [] [PayaraMicro] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548650616334] [levelValue: 900] Payara Micro Runtime directory is located in a temporary file location which can be cleaned by system processes.
-
-[2019-01-27T23:43:36.381-0500] [] [INFORMACIÓN] [] [PayaraMicro] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548650616381] [levelValue: 800] Payara Micro Runtime directory is located at C:\Users\andres\AppData\Local\Temp\payaramicro-rt7323523950911081286tmp
-
-[2019-01-27T23:43:36.422-0500] [] [INFORMACIÓN] [] [fish.payara.micro.boot.runtime.PayaraMicroRuntimeBuilder] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548650616422] [levelValue: 800] Built Payara Micro Runtime
-
-[2019-01-27T23:43:38.082-0500] [] [INFORMACIÓN] [NCLS-CORE-00046] [javax.enterprise.system.core] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548650618082] [levelValue: 800] Cannot find javadb client jar file, derby jdbc driver will not be available by default.
-
-[2019-01-27T23:43:38.598-0500] [] [INFO] [] [org.hibernate.validator.internal.util.Version] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548650618598] [levelValue: 800] HV000001: Hibernate Validator 6.0.12.Final
-
-[2019-01-27T23:43:39.585-0500] [] [INFORMACIÓN] [] [fish.payara.micro.boot.runtime.BootCommand] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548650619585] [levelValue: 800] Boot Command set returned with result SUCCESS : PlainTextActionReporterSUCCESSDescription: set AdminCommandnull
-    configs.config.server-config.hazelcast-config-specific-configuration.lite=false
-
-
-[2019-01-27T23:43:39.650-0500] [] [INFORMACIÓN] [] [fish.payara.micro.boot.runtime.BootCommand] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548650619650] [levelValue: 800] Boot Command set returned with result SUCCESS : PlainTextActionReporterSUCCESSDescription: set AdminCommandnull
-    hazelcast-runtime-configuration.host-aware-partitioning=true
-
-
-[2019-01-27T23:43:39.674-0500] [] [INFORMACIÓN] [] [fish.payara.micro.boot.runtime.BootCommand] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548650619674] [levelValue: 800] Boot Command set returned with result SUCCESS : PlainTextActionReporterSUCCESSDescription: set AdminCommandnull
-    hazelcast-runtime-configuration.discovery-mode=multicast
-
-
-[2019-01-27T23:43:41.080-0500] [] [INFORMACIÓN] [] [org.glassfish.ha.store.spi.BackingStoreFactoryRegistry] [tid: _ThreadID=19 _ThreadName=RunLevelControllerThread-1548650619710] [timeMillis: 1548650621080] [levelValue: 800] Registered fish.payara.ha.hazelcast.store.HazelcastBackingStoreFactoryProxy for persistence-type = hazelcast in BackingStoreFactoryRegistry
-
-[2019-01-27T23:43:41.481-0500] [] [INFORMACIÓN] [NCLS-CORE-00101] [javax.enterprise.system.core] [tid: _ThreadID=20 _ThreadName=RunLevelControllerThread-1548650619713] [timeMillis: 1548650621481] [levelValue: 800] Network Listener http-listener started in: 22ms - bound to [/0.0.0.0:8080]
-
-[2019-01-27T23:43:41.486-0500] [] [INFORMACIÓN] [NCLS-CORE-00058] [javax.enterprise.system.core] [tid: _ThreadID=20 _ThreadName=RunLevelControllerThread-1548650619713] [timeMillis: 1548650621486] [levelValue: 800] Network listener https-listener on port 8443 disabled per domain.xml
-
-[2019-01-27T23:43:41.488-0500] [] [INFORMACIÓN] [NCLS-CORE-00087] [javax.enterprise.system.core] [tid: _ThreadID=20 _ThreadName=RunLevelControllerThread-1548650619713] [timeMillis: 1548650621488] [levelValue: 800] Grizzly 2.4.3 started in: 1.272ms - bound to [http-listener:8080]
-
-[2019-01-27T23:43:41.499-0500] [] [INFORMACIÓN] [NCLS-CORE-00017] [javax.enterprise.system.core] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548650621499] [levelValue: 800] Payara Micro  5.184 #badassmicrofish (89) startup time : Embedded (3.269ms), startup services(1.802ms), total(5.071ms)
-
-[2019-01-27T23:43:41.950-0500] [] [INFORMACIÓN] [NCLS-JMX-00006] [javax.enterprise.system.jmx] [tid: _ThreadID=37 _ThreadName=Thread-6] [timeMillis: 1548650621950] [levelValue: 800] JMXStartupService has disabled JMXConnector system
-
-[2019-01-27T23:43:47.867-0500] [] [INFORMACIÓN] [NCLS-SECURITY-01002] [javax.enterprise.system.core.security] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548650627867] [levelValue: 800] Java security manager is disabled.
-
-[2019-01-27T23:43:47.869-0500] [] [INFORMACIÓN] [NCLS-SECURITY-01010] [javax.enterprise.system.core.security] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548650627869] [levelValue: 800] Entering Security Startup Service.
-
-[2019-01-27T23:43:47.881-0500] [] [INFORMACIÓN] [NCLS-SECURITY-01143] [javax.enterprise.system.core.security] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548650627881] [levelValue: 800] Loading policy provider com.sun.enterprise.security.jacc.provider.SimplePolicyProvider.
-
-[2019-01-27T23:43:47.934-0500] [] [INFORMACIÓN] [NCLS-SECURITY-01011] [javax.enterprise.system.core.security] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548650627934] [levelValue: 800] Security Service(s) started successfully.
-
-[2019-01-27T23:43:49.256-0500] [] [INFORMACIÓN] [AS-WEB-GLUE-00198] [javax.enterprise.web] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548650629256] [levelValue: 800] Created HTTP listener http-listener on host/port 0.0.0.0:8080
-
-[2019-01-27T23:43:49.316-0500] [] [INFORMACIÓN] [AS-WEB-GLUE-00200] [javax.enterprise.web] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548650629316] [levelValue: 800] Created virtual server server
-
-[2019-01-27T23:43:49.960-0500] [] [INFORMACIÓN] [AS-WEB-CORE-00306] [javax.enterprise.web.core] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548650629960] [levelValue: 800] Setting JAAS app name glassfish-web
-
-[2019-01-27T23:43:49.963-0500] [] [INFORMACIÓN] [AS-WEB-GLUE-00201] [javax.enterprise.web] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548650629963] [levelValue: 800] Virtual server server loaded default web module 
-
-[2019-01-27T23:43:57.570-0500] [] [INFORMACIÓN] [] [org.eclipse.persistence.session./file:/C:/Users/andres/AppData/Local/Temp/payaramicro-rt7323523950911081286tmp/applications/asdapi-web-1.0/WEB-INF/classes/_activos-pu] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548650637570] [levelValue: 800] EclipseLink, version: Eclipse Persistence Services - 2.7.3.v20180807-4be1041
-
-[2019-01-27T23:43:58.732-0500] [] [INFORMACIÓN] [] [org.eclipse.persistence.session./file:/C:/Users/andres/AppData/Local/Temp/payaramicro-rt7323523950911081286tmp/applications/asdapi-web-1.0/WEB-INF/classes/_activos-pu.connection] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548650638732] [levelValue: 800] /file:/C:/Users/andres/AppData/Local/Temp/payaramicro-rt7323523950911081286tmp/applications/asdapi-web-1.0/WEB-INF/classes/_activos-pu login successful
-
-[2019-01-27T23:43:58.989-0500] [] [INFO] [] [org.jboss.weld.Version] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548650638989] [levelValue: 800] WELD-000900: 3.0.5 (p1)
-
-[2019-01-27T23:44:00.146-0500] [] [INFORMACIÓN] [AS-EJB-00054] [javax.enterprise.ejb.container] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548650640146] [levelValue: 800] Portable JNDI names for EJB I18n: [java:global/asdapi-web-1.0/I18n!com.asd.api.ejb.i18n.I18nLocal, java:global/asdapi-web-1.0/I18n]
-
-[2019-01-27T23:44:00.218-0500] [] [INFORMACIÓN] [AS-EJB-00054] [javax.enterprise.ejb.container] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548650640218] [levelValue: 800] Portable JNDI names for EJB ActivosBean: [java:global/asdapi-web-1.0/ActivosBean!com.asd.api.ejb.activos.ActivosBeanLocal, java:global/asdapi-web-1.0/ActivosBean]
-
-[2019-01-27T23:44:03.647-0500] [] [INFORMACIÓN] [] [javax.enterprise.system.core] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548650643647] [levelValue: 800] asdapi-web-1.0 was successfully deployed in 21.400 milliseconds.
-
-[2019-01-27T23:44:03.651-0500] [] [INFORMACIÓN] [] [PayaraMicro] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548650643651] [levelValue: 800] Deployed 1 archive(s)
-
-[2019-01-27T23:44:04.588-0500] [] [INFORMACIÓN] [] [com.hazelcast.instance.AddressPicker] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548650644588] [levelValue: 800] [LOCAL] [development] [3.11] Using bind address: /25.32.91.217:6900
-
-[2019-01-27T23:44:04.589-0500] [] [INFORMACIÓN] [] [com.hazelcast.instance.AddressPicker] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548650644589] [levelValue: 800] [LOCAL] [development] [3.11] Using public address: /25.32.91.217:6900
-
-[2019-01-27T23:44:04.636-0500] [] [INFORMACIÓN] [] [com.hazelcast.system] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548650644636] [levelValue: 800] [25.32.91.217]:6900 [development] [3.11] Hazelcast 3.11 (20181023 - 1500bbb) starting at [25.32.91.217]:6900
-
-[2019-01-27T23:44:04.637-0500] [] [INFORMACIÓN] [] [com.hazelcast.system] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548650644637] [levelValue: 800] [25.32.91.217]:6900 [development] [3.11] Copyright (c) 2008-2018, Hazelcast, Inc. All Rights Reserved.
-
-[2019-01-27T23:44:04.638-0500] [] [INFORMACIÓN] [] [com.hazelcast.instance.Node] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548650644638] [levelValue: 800] [25.32.91.217]:6900 [development] [3.11] A non-empty group password is configured for the Hazelcast member. Starting with Hazelcast version 3.8.2, members with the same group name, but with different group passwords (that do not use authentication) form a cluster. The group password configuration will be removed completely in a future release.
-
-[2019-01-27T23:44:05.338-0500] [] [INFORMACIÓN] [] [com.hazelcast.spi.impl.operationservice.impl.BackpressureRegulator] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548650645338] [levelValue: 800] [25.32.91.217]:6900 [development] [3.11] Backpressure is disabled
-
-[2019-01-27T23:44:07.228-0500] [] [INFORMACIÓN] [] [com.hazelcast.instance.Node] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548650647228] [levelValue: 800] [25.32.91.217]:6900 [development] [3.11] Creating MulticastJoiner
-
-[2019-01-27T23:44:07.667-0500] [] [INFORMACIÓN] [] [com.hazelcast.spi.impl.operationexecutor.impl.OperationExecutorImpl] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548650647667] [levelValue: 800] [25.32.91.217]:6900 [development] [3.11] Starting 4 partition threads and 3 generic threads (1 dedicated for priority tasks)
-
-[2019-01-27T23:44:07.669-0500] [] [INFORMACIÓN] [] [com.hazelcast.internal.diagnostics.Diagnostics] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548650647669] [levelValue: 800] [25.32.91.217]:6900 [development] [3.11] Diagnostics disabled. To enable add -Dhazelcast.diagnostics.enabled=true to the JVM arguments.
-
-[2019-01-27T23:44:07.690-0500] [] [INFORMACIÓN] [] [com.hazelcast.core.LifecycleService] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548650647690] [levelValue: 800] [25.32.91.217]:6900 [development] [3.11] [25.32.91.217]:6900 is STARTING
-
-[2019-01-27T23:44:10.554-0500] [] [INFORMACIÓN] [] [com.hazelcast.internal.cluster.ClusterService] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548650650554] [levelValue: 800] [25.32.91.217]:6900 [development] [3.11] 
-
-Members {size:1, ver:1} [
-	Member [25.32.91.217]:6900 - 86a0f49e-5497-4746-913f-c15b8c43f0c7 this
-]
-
-
-[2019-01-27T23:44:10.615-0500] [] [INFORMACIÓN] [] [com.hazelcast.internal.jmx.ManagementService] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548650650615] [levelValue: 800] [25.32.91.217]:6900 [development] [3.11] Hazelcast JMX agent enabled.
-
-[2019-01-27T23:44:10.651-0500] [] [INFORMACIÓN] [] [com.hazelcast.core.LifecycleService] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548650650651] [levelValue: 800] [25.32.91.217]:6900 [development] [3.11] [25.32.91.217]:6900 is STARTED
-
-[2019-01-27T23:44:10.683-0500] [] [INFORMACIÓN] [] [fish.payara.nucleus.hazelcast.HazelcastCore] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548650650683] [levelValue: 800] Hazelcast Instance Bound to JNDI at payara/Hazelcast
-
-[2019-01-27T23:44:10.699-0500] [] [INFORMACIÓN] [] [fish.payara.nucleus.hazelcast.HazelcastCore] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548650650699] [levelValue: 800] JSR107 Caching Provider Bound to JNDI at payara/CachingProvider
-
-[2019-01-27T23:44:10.705-0500] [] [INFORMACIÓN] [] [fish.payara.nucleus.hazelcast.HazelcastCore] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548650650705] [levelValue: 800] JSR107 Default Cache Manager Bound to JNDI at payara/CacheManager
-
-[2019-01-27T23:44:10.709-0500] [] [INFORMACIÓN] [] [fish.payara.nucleus.cluster.PayaraCluster] [tid: _ThreadID=24 _ThreadName=Executor-Service-2] [timeMillis: 1548650650709] [levelValue: 800] [[
-  Data Grid Status 
-Payara Data Grid State: DG Version: 35 DG Size: 1
-Instances: {
-Address: /25.32.91.217:6900 UUID: 86a0f49e-5497-4746-913f-c15b8c43f0c7 Lite: false This: true Name: Exuberant-Dab Group: MicroShoal
-}]]
-
-[2019-01-27T23:44:10.776-0500] [] [INFORMACIÓN] [AS-WEB-GLUE-00130] [javax.enterprise.web] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548650650776] [levelValue: 800] Invalid Session Management Configuration for non-distributable app [asdapi-web-1.0] - defaulting to memory: persistence-type = [hazelcast] / persistenceFrequency = [web-method] / persistenceScope = [modified-session]
-
-[2019-01-27T23:44:10.821-0500] [] [INFORMACIÓN] [] [com.hazelcast.internal.partition.impl.PartitionStateManager] [tid: _ThreadID=26 _ThreadName=Executor-Service-4] [timeMillis: 1548650650821] [levelValue: 800] [25.32.91.217]:6900 [development] [3.11] Initializing cluster partition table arrangement...
-
-[2019-01-27T23:44:11.636-0500] [] [INFORMACIÓN] [] [org.glassfish.soteria.servlet.SamRegistrationInstaller] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548650651636] [levelValue: 800] Initializing Soteria 1.1-b01 for context '/asd'
-
-[2019-01-27T23:44:11.711-0500] [] [INFORMACIÓN] [] [com.hazelcast.internal.diagnostics.HealthMonitor] [tid: _ThreadID=89 _ThreadName=hz._hzInstance_1_development.HealthMonitor] [timeMillis: 1548650651711] [levelValue: 800] [25.32.91.217]:6900 [development] [3.11] processors=4, physical.memory.total=15,9G, physical.memory.free=4,7G, swap.space.total=25,1G, swap.space.free=6,1G, heap.memory.used=336,5M, heap.memory.free=899,5M, heap.memory.total=1,2G, heap.memory.max=3,5G, heap.memory.used/total=27,22%, heap.memory.used/max=9,27%, minor.gc.count=14, minor.gc.time=438ms, major.gc.count=3, major.gc.time=625ms, load.process=46,64%, load.system=100,00%, load.systemAverage=n/a thread.count=100, thread.peakCount=100, cluster.timeDiff=0, event.q.size=0, executor.q.async.size=0, executor.q.client.size=0, executor.q.query.size=0, executor.q.scheduled.size=0, executor.q.io.size=0, executor.q.system.size=0, executor.q.operations.size=0, executor.q.priorityOperation.size=0, operations.completed.count=6, executor.q.mapLoad.size=0, executor.q.mapLoadAllKeys.size=0, executor.q.cluster.size=0, executor.q.response.size=0, operations.running.count=0, operations.pending.invocations.percentage=0,00%, operations.pending.invocations.count=0, proxy.count=0, clientEndpoint.count=0, connection.active.count=0, client.connection.count=0, connection.count=0
-
-[2019-01-27T23:44:14.103-0500] [] [INFORMACIÓN] [AS-WEB-GLUE-00172] [javax.enterprise.web] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548650654103] [levelValue: 800] Loading application [asdapi-web-1.0] at [/asd]
-
-[2019-01-27T23:44:18.810-0500] [] [INFORMACIÓN] [] [PayaraMicro] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548650658810] [levelValue: 800] 
-{
-    "Instance Configuration": {
-        "Host": "andres-pc",
-        "Http Port(s)": "8080",
-        "Https Port(s)": "",
-        "Instance Name": "Exuberant-Dab",
-        "Instance Group": "MicroShoal",
-        "Hazelcast Member UUID": "86a0f49e-5497-4746-913f-c15b8c43f0c7",
-        "Deployed": [
-            {
-                "Name": "asdapi-web-1.0",
-                "Type": "war",
-                "Context Root": "/asd"
-            }
-        ]
-    }
-}
-
-[2019-01-27T23:44:18.826-0500] [] [INFORMACIÓN] [] [PayaraMicro] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548650658826] [levelValue: 800] 
-Payara Micro URLs:
-http://andres-pc:8080/asd
-
-'asdapi-web-1.0' REST Endpoints:
-GET	/asd/services/application.wadl
-GET	/asd/services/openapi
-GET	/asd/services/openapi.{type:json|yaml}
-POST	/asd/services/servicioActivos/actualizarActivoFijo
-POST	/asd/services/servicioActivos/crearActivoFijo
-GET	/asd/services/servicioActivos/obtenerActivosFijos
-GET	/asd/services/servicioActivos/obtenerActivosFijosFechaCompra
-GET	/asd/services/servicioActivos/obtenerActivosFijosIdTipo
-GET	/asd/services/servicioActivos/obtenerActivosFijosSerial
-GET	/asd/services/servicioActivos/obtenerAreas
-GET	/asd/services/servicioActivos/obtenerPersonas
-
-
-
-[2019-01-27T23:44:18.832-0500] [] [INFORMACIÓN] [] [PayaraMicro] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548650658832] [levelValue: 800] Payara Micro  5.184 #badassmicrofish (build 89) ready in 38.669 (ms)
-
-[2019-01-27T23:44:31.845-0500] [] [INFORMACIÓN] [] [com.hazelcast.internal.diagnostics.HealthMonitor] [tid: _ThreadID=89 _ThreadName=hz._hzInstance_1_development.HealthMonitor] [timeMillis: 1548650671845] [levelValue: 800] [25.32.91.217]:6900 [development] [3.11] processors=4, physical.memory.total=15,9G, physical.memory.free=4,6G, swap.space.total=25,1G, swap.space.free=5,6G, heap.memory.used=147,1M, heap.memory.free=1,2G, heap.memory.total=1,3G, heap.memory.max=3,5G, heap.memory.used/total=10,98%, heap.memory.used/max=4,05%, minor.gc.count=15, minor.gc.time=537ms, major.gc.count=4, major.gc.time=935ms, load.process=11,21%, load.system=99,40%, load.systemAverage=n/a thread.count=102, thread.peakCount=102, cluster.timeDiff=0, event.q.size=0, executor.q.async.size=0, executor.q.client.size=0, executor.q.query.size=0, executor.q.scheduled.size=0, executor.q.io.size=0, executor.q.system.size=0, executor.q.operations.size=0, executor.q.priorityOperation.size=0, operations.completed.count=17, executor.q.mapLoad.size=0, executor.q.mapLoadAllKeys.size=0, executor.q.cluster.size=0, executor.q.response.size=0, operations.running.count=0, operations.pending.invocations.percentage=0,00%, operations.pending.invocations.count=0, proxy.count=0, clientEndpoint.count=0, connection.active.count=0, client.connection.count=0, connection.count=0
-
-[2019-01-27T23:44:51.965-0500] [] [INFORMACIÓN] [] [com.hazelcast.internal.diagnostics.HealthMonitor] [tid: _ThreadID=89 _ThreadName=hz._hzInstance_1_development.HealthMonitor] [timeMillis: 1548650691965] [levelValue: 800] [25.32.91.217]:6900 [development] [3.11] processors=4, physical.memory.total=15,9G, physical.memory.free=4,6G, swap.space.total=25,1G, swap.space.free=5,8G, heap.memory.used=155,9M, heap.memory.free=1,2G, heap.memory.total=1,3G, heap.memory.max=3,5G, heap.memory.used/total=11,64%, heap.memory.used/max=4,29%, minor.gc.count=15, minor.gc.time=537ms, major.gc.count=4, major.gc.time=935ms, load.process=0,83%, load.system=98,76%, load.systemAverage=n/a thread.count=98, thread.peakCount=102, cluster.timeDiff=0, event.q.size=0, executor.q.async.size=0, executor.q.client.size=0, executor.q.query.size=0, executor.q.scheduled.size=0, executor.q.io.size=0, executor.q.system.size=0, executor.q.operations.size=0, executor.q.priorityOperation.size=0, operations.completed.count=17, executor.q.mapLoad.size=0, executor.q.mapLoadAllKeys.size=0, executor.q.cluster.size=0, executor.q.response.size=0, operations.running.count=0, operations.pending.invocations.percentage=0,00%, operations.pending.invocations.count=0, proxy.count=0, clientEndpoint.count=0, connection.active.count=0, client.connection.count=0, connection.count=0
-
-[2019-01-27T23:45:12.081-0500] [] [INFORMACIÓN] [] [com.hazelcast.internal.diagnostics.HealthMonitor] [tid: _ThreadID=89 _ThreadName=hz._hzInstance_1_development.HealthMonitor] [timeMillis: 1548650712081] [levelValue: 800] [25.32.91.217]:6900 [development] [3.11] processors=4, physical.memory.total=15,9G, physical.memory.free=4,6G, swap.space.total=25,1G, swap.space.free=5,9G, heap.memory.used=170,0M, heap.memory.free=1,1G, heap.memory.total=1,3G, heap.memory.max=3,5G, heap.memory.used/total=12,69%, heap.memory.used/max=4,68%, minor.gc.count=15, minor.gc.time=537ms, major.gc.count=4, major.gc.time=935ms, load.process=0,23%, load.system=91,07%, load.systemAverage=n/a thread.count=73, thread.peakCount=102, cluster.timeDiff=0, event.q.size=0, executor.q.async.size=0, executor.q.client.size=0, executor.q.query.size=0, executor.q.scheduled.size=0, executor.q.io.size=0, executor.q.system.size=0, executor.q.operations.size=0, executor.q.priorityOperation.size=0, operations.completed.count=17, executor.q.mapLoad.size=0, executor.q.mapLoadAllKeys.size=0, executor.q.cluster.size=0, executor.q.response.size=0, operations.running.count=0, operations.pending.invocations.percentage=0,00%, operations.pending.invocations.count=0, proxy.count=0, clientEndpoint.count=0, connection.active.count=0, client.connection.count=0, connection.count=0
-
-[2019-01-27T23:45:32.212-0500] [] [INFORMACIÓN] [] [com.hazelcast.internal.diagnostics.HealthMonitor] [tid: _ThreadID=89 _ThreadName=hz._hzInstance_1_development.HealthMonitor] [timeMillis: 1548650732212] [levelValue: 800] [25.32.91.217]:6900 [development] [3.11] processors=4, physical.memory.total=15,9G, physical.memory.free=4,6G, swap.space.total=25,1G, swap.space.free=5,9G, heap.memory.used=171,4M, heap.memory.free=1,1G, heap.memory.total=1,3G, heap.memory.max=3,5G, heap.memory.used/total=12,79%, heap.memory.used/max=4,72%, minor.gc.count=15, minor.gc.time=537ms, major.gc.count=4, major.gc.time=935ms, load.process=0,17%, load.system=82,74%, load.systemAverage=n/a thread.count=72, thread.peakCount=102, cluster.timeDiff=0, event.q.size=0, executor.q.async.size=0, executor.q.client.size=0, executor.q.query.size=0, executor.q.scheduled.size=0, executor.q.io.size=0, executor.q.system.size=0, executor.q.operations.size=0, executor.q.priorityOperation.size=0, operations.completed.count=17, executor.q.mapLoad.size=0, executor.q.mapLoadAllKeys.size=0, executor.q.cluster.size=0, executor.q.response.size=0, operations.running.count=0, operations.pending.invocations.percentage=0,00%, operations.pending.invocations.count=0, proxy.count=0, clientEndpoint.count=0, connection.active.count=0, client.connection.count=0, connection.count=0
+[2019-01-28T01:21:10.841-0500] [] [GRAVE] [] [javax.enterprise.system.core] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548656470841] [levelValue: 1000] Exception while invoking class org.glassfish.persistence.jpa.JPADeployer prepare method
+
+[2019-01-28T01:21:10.843-0500] [] [GRAVE] [] [javax.enterprise.system.core] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548656470843] [levelValue: 1000] Exception while preparing the app
+
+[2019-01-28T01:21:10.844-0500] [] [GRAVE] [NCLS-CORE-00026] [javax.enterprise.system.core] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548656470844] [levelValue: 1000] [[
+  Exception during lifecycle processing
+javax.persistence.PersistenceException: Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.7.3.v20180807-4be1041): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: java.sql.SQLException: Error in allocating a connection. Cause: Connection could not be allocated because: Access denied for user 'root'@'localhost' (using password: YES)
+Error Code: 0
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.deploy(EntityManagerSetupImpl.java:852)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryDelegate.getAbstractSession(EntityManagerFactoryDelegate.java:219)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryDelegate.getDatabaseSession(EntityManagerFactoryDelegate.java:197)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryImpl.getDatabaseSession(EntityManagerFactoryImpl.java:542)
+	at org.eclipse.persistence.jpa.PersistenceProvider.createContainerEntityManagerFactoryImpl(PersistenceProvider.java:388)
+	at org.eclipse.persistence.jpa.PersistenceProvider.createContainerEntityManagerFactory(PersistenceProvider.java:316)
+	at org.glassfish.persistence.jpa.PersistenceUnitLoader.loadPU(PersistenceUnitLoader.java:207)
+	at org.glassfish.persistence.jpa.PersistenceUnitLoader.<init>(PersistenceUnitLoader.java:114)
+	at org.glassfish.persistence.jpa.JPADeployer$1.visitPUD(JPADeployer.java:225)
+	at org.glassfish.persistence.jpa.JPADeployer$PersistenceUnitDescriptorIterator.iteratePUDs(JPADeployer.java:525)
+	at org.glassfish.persistence.jpa.JPADeployer.createEMFs(JPADeployer.java:240)
+	at org.glassfish.persistence.jpa.JPADeployer.prepare(JPADeployer.java:170)
+	at com.sun.enterprise.v3.server.ApplicationLifecycle.prepareModule(ApplicationLifecycle.java:979)
+	at com.sun.enterprise.v3.server.ApplicationLifecycle.prepare(ApplicationLifecycle.java:439)
+	at org.glassfish.deployment.admin.DeployCommand.execute(DeployCommand.java:540)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$2$1.run(CommandRunnerImpl.java:549)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$2$1.run(CommandRunnerImpl.java:545)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Unknown Source)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$2.execute(CommandRunnerImpl.java:544)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$3.run(CommandRunnerImpl.java:575)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$3.run(CommandRunnerImpl.java:567)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at javax.security.auth.Subject.doAs(Unknown Source)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.doCommand(CommandRunnerImpl.java:566)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.doCommand(CommandRunnerImpl.java:1475)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl.access$1300(CommandRunnerImpl.java:111)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$ExecutionContext.execute(CommandRunnerImpl.java:1857)
+	at com.sun.enterprise.v3.admin.CommandRunnerImpl$ExecutionContext.execute(CommandRunnerImpl.java:1733)
+	at com.sun.enterprise.admin.cli.embeddable.DeployerImpl.deploy(DeployerImpl.java:136)
+	at fish.payara.micro.impl.PayaraMicroImpl.deployAll(PayaraMicroImpl.java:1536)
+	at fish.payara.micro.impl.PayaraMicroImpl.bootStrap(PayaraMicroImpl.java:1028)
+	at fish.payara.micro.impl.PayaraMicroImpl.main(PayaraMicroImpl.java:200)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at fish.payara.micro.boot.loader.MainMethodRunner.run(MainMethodRunner.java:48)
+	at fish.payara.micro.boot.loader.Launcher.launch(Launcher.java:107)
+	at fish.payara.micro.boot.loader.Launcher.launch(Launcher.java:70)
+	at fish.payara.micro.boot.PayaraMicroLauncher.main(PayaraMicroLauncher.java:79)
+	at fish.payara.micro.PayaraMicro.main(PayaraMicro.java:397)
+Caused by: Exception [EclipseLink-4002] (Eclipse Persistence Services - 2.7.3.v20180807-4be1041): org.eclipse.persistence.exceptions.DatabaseException
+Internal Exception: java.sql.SQLException: Error in allocating a connection. Cause: Connection could not be allocated because: Access denied for user 'root'@'localhost' (using password: YES)
+Error Code: 0
+	at org.eclipse.persistence.exceptions.DatabaseException.sqlException(DatabaseException.java:318)
+	at org.eclipse.persistence.sessions.JNDIConnector.connect(JNDIConnector.java:150)
+	at org.eclipse.persistence.sessions.DatasourceLogin.connectToDatasource(DatasourceLogin.java:172)
+	at org.eclipse.persistence.internal.sessions.DatabaseSessionImpl.setOrDetectDatasource(DatabaseSessionImpl.java:233)
+	at org.eclipse.persistence.internal.sessions.DatabaseSessionImpl.loginAndDetectDatasource(DatabaseSessionImpl.java:815)
+	at org.eclipse.persistence.internal.jpa.EntityManagerFactoryProvider.login(EntityManagerFactoryProvider.java:256)
+	at org.eclipse.persistence.internal.jpa.EntityManagerSetupImpl.deploy(EntityManagerSetupImpl.java:767)
+	... 41 more
+Caused by: java.sql.SQLException: Error in allocating a connection. Cause: Connection could not be allocated because: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.sun.gjc.spi.base.AbstractDataSource.getConnection(AbstractDataSource.java:121)
+	at org.eclipse.persistence.sessions.JNDIConnector.connect(JNDIConnector.java:138)
+	... 46 more
+Caused by: javax.resource.spi.ResourceAllocationException: Error in allocating a connection. Cause: Connection could not be allocated because: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.sun.enterprise.connectors.ConnectionManagerImpl.internalGetConnection(ConnectionManagerImpl.java:319)
+	at com.sun.enterprise.connectors.ConnectionManagerImpl.allocateConnection(ConnectionManagerImpl.java:196)
+	at com.sun.enterprise.connectors.ConnectionManagerImpl.allocateConnection(ConnectionManagerImpl.java:171)
+	at com.sun.enterprise.connectors.ConnectionManagerImpl.allocateConnection(ConnectionManagerImpl.java:166)
+	at com.sun.gjc.spi.base.AbstractDataSource.getConnection(AbstractDataSource.java:115)
+	... 47 more
+Caused by: com.sun.appserv.connectors.internal.api.PoolingException: Connection could not be allocated because: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.sun.enterprise.resource.pool.datastructure.RWLockDataStructure.addResource(RWLockDataStructure.java:103)
+	at com.sun.enterprise.resource.pool.ConnectionPool.addResource(ConnectionPool.java:282)
+	at com.sun.enterprise.resource.pool.ConnectionPool.createResourceAndAddToPool(ConnectionPool.java:1510)
+	at com.sun.enterprise.resource.pool.ConnectionPool.createResources(ConnectionPool.java:942)
+	at com.sun.enterprise.resource.pool.ConnectionPool.initPool(ConnectionPool.java:230)
+	at com.sun.enterprise.resource.pool.ConnectionPool.internalGetResource(ConnectionPool.java:513)
+	at com.sun.enterprise.resource.pool.ConnectionPool.getResource(ConnectionPool.java:381)
+	at com.sun.enterprise.resource.pool.PoolManagerImpl.getResourceFromPool(PoolManagerImpl.java:244)
+	at com.sun.enterprise.resource.pool.PoolManagerImpl.getResource(PoolManagerImpl.java:171)
+	at com.sun.enterprise.connectors.ConnectionManagerImpl.getResource(ConnectionManagerImpl.java:354)
+	at com.sun.enterprise.connectors.ConnectionManagerImpl.internalGetConnection(ConnectionManagerImpl.java:307)
+	... 51 more
+Caused by: com.sun.appserv.connectors.internal.api.PoolingException: Connection could not be allocated because: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.sun.enterprise.resource.pool.ConnectionPool.createSingleResource(ConnectionPool.java:922)
+	at com.sun.enterprise.resource.pool.ConnectionPool.createResource(ConnectionPool.java:1187)
+	at com.sun.enterprise.resource.pool.datastructure.RWLockDataStructure.addResource(RWLockDataStructure.java:98)
+	... 61 more
+Caused by: com.sun.appserv.connectors.internal.api.PoolingException: Connection could not be allocated because: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.sun.enterprise.resource.allocator.ConnectorAllocator.createResource(ConnectorAllocator.java:181)
+	at com.sun.enterprise.resource.pool.ConnectionPool.createSingleResource(ConnectionPool.java:905)
+	... 63 more
+Caused by: javax.resource.spi.ResourceAllocationException: Connection could not be allocated because: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.sun.gjc.spi.XAManagedConnectionFactory.createManagedConnection(XAManagedConnectionFactory.java:133)
+	at com.sun.enterprise.resource.allocator.ConnectorAllocator.createResource(ConnectorAllocator.java:161)
+	... 64 more
+Caused by: java.sql.SQLException: Access denied for user 'root'@'localhost' (using password: YES)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:965)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3978)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3914)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:871)
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1714)
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1224)
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2199)
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2230)
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2025)
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:778)
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:47)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:425)
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:386)
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:330)
+	at com.mysql.jdbc.jdbc2.optional.MysqlDataSource.getConnection(MysqlDataSource.java:428)
+	at com.mysql.jdbc.jdbc2.optional.MysqlDataSource.getConnection(MysqlDataSource.java:136)
+	at com.mysql.jdbc.jdbc2.optional.MysqlDataSource.getConnection(MysqlDataSource.java:107)
+	at com.mysql.jdbc.jdbc2.optional.MysqlXADataSource.getXAConnection(MysqlXADataSource.java:46)
+	at com.sun.gjc.spi.XAManagedConnectionFactory.createManagedConnection(XAManagedConnectionFactory.java:119)
+	... 65 more
+]]
+
+[2019-01-28T01:21:10.910-0500] [] [ADVERTENCIA] [] [javax.enterprise.web.util] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548656470910] [levelValue: 900] The web application [unknown] registered the JDBC driver [com.mysql.jdbc.Driver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
+
+[2019-01-28T01:21:10.914-0500] [] [ADVERTENCIA] [] [javax.enterprise.web.util] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548656470914] [levelValue: 900] The web application [unknown] registered the JDBC driver [com.mysql.fabric.jdbc.FabricMySQLDriver] but failed to unregister it when the web application was stopped. To prevent a memory leak, the JDBC Driver has been forcibly unregistered.
 
