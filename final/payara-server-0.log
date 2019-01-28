@@ -1,0 +1,55 @@
+[2019-01-28T02:05:32.479-0500] [] [INFORMACIÓN] [] [fish.payara.nucleus.cluster.PayaraCluster] [tid: _ThreadID=23 _ThreadName=Executor-Service-1] [timeMillis: 1548659132479] [levelValue: 800] [[
+  Data Grid Status 
+Payara Data Grid State: DG Version: 35 DG Size: 1
+Instances: {
+Address: /fe80:0:0:0:bcca:7194:8061:71%eth6:6900 UUID: dd832e20-46ee-450d-8435-0f70010fd9bd Lite: false This: true Name: Breakable-Footballfish Group: MicroShoal
+}]]
+
+[2019-01-28T02:05:32.792-0500] [] [INFORMACIÓN] [] [com.hazelcast.internal.partition.impl.PartitionStateManager] [tid: _ThreadID=116 _ThreadName=Executor-Service-8] [timeMillis: 1548659132792] [levelValue: 800] [fe80:0:0:0:bcca:7194:8061:71]:6900 [development] [3.11] Initializing cluster partition table arrangement...
+
+[2019-01-28T02:05:32.822-0500] [] [INFORMACIÓN] [] [com.hazelcast.internal.diagnostics.HealthMonitor] [tid: _ThreadID=90 _ThreadName=hz._hzInstance_1_development.HealthMonitor] [timeMillis: 1548659132822] [levelValue: 800] [fe80:0:0:0:bcca:7194:8061:71]:6900 [development] [3.11] processors=4, physical.memory.total=15,9G, physical.memory.free=7,7G, swap.space.total=27,4G, swap.space.free=14,2G, heap.memory.used=229,8M, heap.memory.free=934,2M, heap.memory.total=1,1G, heap.memory.max=3,5G, heap.memory.used/total=19,74%, heap.memory.used/max=6,33%, minor.gc.count=15, minor.gc.time=372ms, major.gc.count=3, major.gc.time=637ms, load.process=47,64%, load.system=80,47%, load.systemAverage=n/a thread.count=108, thread.peakCount=108, cluster.timeDiff=0, event.q.size=0, executor.q.async.size=0, executor.q.client.size=0, executor.q.query.size=0, executor.q.scheduled.size=0, executor.q.io.size=0, executor.q.system.size=0, executor.q.operations.size=0, executor.q.priorityOperation.size=0, operations.completed.count=4, executor.q.mapLoad.size=0, executor.q.mapLoadAllKeys.size=0, executor.q.cluster.size=0, executor.q.response.size=0, operations.running.count=0, operations.pending.invocations.percentage=0,00%, operations.pending.invocations.count=1, proxy.count=0, clientEndpoint.count=0, connection.active.count=0, client.connection.count=0, connection.count=0
+
+[2019-01-28T02:05:34.219-0500] [] [INFORMACIÓN] [] [org.glassfish.soteria.servlet.SamRegistrationInstaller] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548659134219] [levelValue: 800] Initializing Soteria 1.1-b01 for context '/asd'
+
+[2019-01-28T02:05:34.737-0500] [] [INFORMACIÓN] [AS-WEB-GLUE-00172] [javax.enterprise.web] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548659134737] [levelValue: 800] Loading application [asdapi-web-1.0] at [/asd]
+
+[2019-01-28T02:05:35.694-0500] [] [INFORMACIÓN] [] [PayaraMicro] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548659135694] [levelValue: 800] 
+{
+    "Instance Configuration": {
+        "Host": "andres-pc",
+        "Http Port(s)": "8080",
+        "Https Port(s)": "",
+        "Instance Name": "Breakable-Footballfish",
+        "Instance Group": "MicroShoal",
+        "Hazelcast Member UUID": "dd832e20-46ee-450d-8435-0f70010fd9bd",
+        "Deployed": [
+            {
+                "Name": "asdapi-web-1.0",
+                "Type": "war",
+                "Context Root": "/asd"
+            }
+        ]
+    }
+}
+
+[2019-01-28T02:05:35.703-0500] [] [INFORMACIÓN] [] [PayaraMicro] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548659135703] [levelValue: 800] 
+Payara Micro URLs:
+http://andres-pc:8080/asd
+
+'asdapi-web-1.0' REST Endpoints:
+GET	/asd/services/application.wadl
+GET	/asd/services/openapi
+GET	/asd/services/openapi.{type:json|yaml}
+POST	/asd/services/servicioActivos/actualizarActivoFijo
+POST	/asd/services/servicioActivos/crearActivoFijo
+GET	/asd/services/servicioActivos/obtenerActivosFijos
+GET	/asd/services/servicioActivos/obtenerActivosFijosFechaCompra
+GET	/asd/services/servicioActivos/obtenerActivosFijosIdTipo
+GET	/asd/services/servicioActivos/obtenerActivosFijosSerial
+GET	/asd/services/servicioActivos/obtenerAreas
+GET	/asd/services/servicioActivos/obtenerPersonas
+
+
+
+[2019-01-28T02:05:35.704-0500] [] [INFORMACIÓN] [] [PayaraMicro] [tid: _ThreadID=1 _ThreadName=main] [timeMillis: 1548659135704] [levelValue: 800] Payara Micro  5.184 #badassmicrofish (build 89) ready in 30.512 (ms)
+

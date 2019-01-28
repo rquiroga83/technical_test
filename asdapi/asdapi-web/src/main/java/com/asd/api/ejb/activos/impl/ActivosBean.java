@@ -12,6 +12,7 @@ import com.asd.api.common.activos.dto.PersonasResponseDto;
 import com.asd.api.common.activos.dto.ResultDto;
 import com.asd.api.persistencia.constantes.JpaConstantes;
 import com.asd.api.ejb.activos.ActivosBeanLocal;
+import com.asd.api.ejb.i18n.I18nLocal; 
 import com.asd.api.persistencia.entidades.ActivoFijo;
 import com.asd.api.persistencia.entidades.Area;
 import com.asd.api.persistencia.entidades.EstadoActual;
@@ -19,13 +20,14 @@ import com.asd.api.persistencia.entidades.Persona;
 import com.asd.api.persistencia.entidades.Tipo;
 import java.util.Date;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import javax.ejb.EJB; 
 import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
+import org.slf4j.LoggerFactory; 
+import org.slf4j.Logger; 
 
 /**
  * Implementacion bean de sesion que brinda servicios sobre los activos
@@ -36,11 +38,18 @@ import javax.persistence.Query;
 @Stateless
 public class ActivosBean implements ActivosBeanLocal {
 
-    private static final Logger LOGGER = Logger.getLogger(ActivosBean.class.getName());
+    //private static final Logger LOGGER = Logger.getLogger(ActivosBean.class.getName()); 
+    private final Logger LOGGER = LoggerFactory.getLogger(ActivosBean.class); 
 
     @PersistenceContext(unitName = JpaConstantes.NOMBRE_UNIDAD_PERSISTENCIA)
     private EntityManager em;
 
+    /** 
+     * Inyeccion de EJB I18nLocal utilizado para internacionalizacion 
+     */ 
+    @EJB 
+    private I18nLocal i18n; 
+    
     /**
      * Implementacion de funcion que extrae listado completo de activos
      *
@@ -53,28 +62,28 @@ public class ActivosBean implements ActivosBeanLocal {
 
         try {
             /* Se realiza la consulta de todos los activos */
-            LOGGER.log(Level.INFO, "Se realiza consulta de activos");
+            LOGGER.info( "Se realiza consulta de activos"); 
             Query q = em.createNamedQuery("ActivoFijo.findAll", ActivoFijo.class);
 
             List<ActivoFijo> activosList = q.getResultList();
 
-            LOGGER.log(Level.INFO, "Registros consultados: {0}", activosList.size());
+            LOGGER.info("Registros consultados: " + activosList.size()); 
 
             if (activosList.size() > 0) {
                 /* Se llena Dto de respuesta */
                 activosResponseDto.setActivo(activosList);
-                activosResponseDto.setResult(new ResultDto(ConstantesAplicacion.SUCESS_CODE, "Consulta realizada correctamente"));
+                activosResponseDto.setResult(new ResultDto(ConstantesAplicacion.SUCESS_CODE, i18n.getMessage("mensaje_consulta_exitosa")));
             } else {
-                activosResponseDto.setResult(new ResultDto(ConstantesAplicacion.NO_RESULT_CODE, "No se generaron resultados"));
+                activosResponseDto.setResult(new ResultDto(ConstantesAplicacion.NO_RESULT_CODE, i18n.getMessage("mensaje_consulta_no_resultados"))); 
             }
         } catch (NoResultException e) {
-            LOGGER.log(Level.INFO, "No existen activos {0}", e);
-            activosResponseDto.setResult(new ResultDto(ConstantesAplicacion.NO_RESULT_CODE, "No se generaron resultados"));
+            LOGGER.info( "No existen activos " + e); 
+            activosResponseDto.setResult(new ResultDto(ConstantesAplicacion.NO_RESULT_CODE, i18n.getMessage("mensaje_consulta_no_resultados")));
 
         } catch (Exception e) {
-            LOGGER.log(Level.SEVERE, "Error general en la consulta del activo {0}", e);
-            activosResponseDto.setResult(new ResultDto(ConstantesAplicacion.ERROR_CODE, "Error general en la consulta del activo "));
-        }
+            LOGGER.error( "Error general en la consulta del activo " + e); 
+            activosResponseDto.setResult(new ResultDto(ConstantesAplicacion.ERROR_CODE, i18n.getMessage("mensaje_consulta_error_general") + " " + e.getMessage())); 
+        } 
 
         return activosResponseDto;
     }
@@ -91,29 +100,29 @@ public class ActivosBean implements ActivosBeanLocal {
 
         try {
             /* Se realiza la consulta de todos los activos */
-            LOGGER.log(Level.INFO, "Se realiza consulta de activos por serial");
+            LOGGER.info( "Se realiza consulta de activos por serial"); 
             Query q = em.createNamedQuery("ActivoFijo.findBySerial", ActivoFijo.class)
                     .setParameter("serial", serial);
 
             List<ActivoFijo> activosList = q.getResultList();
 
-            LOGGER.log(Level.INFO, "Registros consultados: {0}", activosList.size());
+            LOGGER.info( "Se realiza consulta de activos por serial"); 
 
             if (activosList.size() > 0) {
                 /* Se llena Dto de respuesta */
                 activosResponseDto.setActivo(activosList);
-                activosResponseDto.setResult(new ResultDto(ConstantesAplicacion.SUCESS_CODE, "Consulta realizada correctamente"));
+                activosResponseDto.setResult(new ResultDto(ConstantesAplicacion.SUCESS_CODE, i18n.getMessage("mensaje_consulta_exitosa"))); 
             } else {
-                activosResponseDto.setResult(new ResultDto(ConstantesAplicacion.NO_RESULT_CODE, "No se generaron resultados"));
+                activosResponseDto.setResult(new ResultDto(ConstantesAplicacion.NO_RESULT_CODE, i18n.getMessage("mensaje_consulta_no_resultados"))); 
             }
 
         } catch (NoResultException e) {
-            LOGGER.log(Level.INFO, "No existen activos {0}", e);
-            activosResponseDto.setResult(new ResultDto(ConstantesAplicacion.ERROR_CODE, "No se generaron resultados"));
+            LOGGER.info( "No existen activos " + e); 
+            activosResponseDto.setResult(new ResultDto(ConstantesAplicacion.ERROR_CODE, i18n.getMessage("mensaje_consulta_no_resultados")));
 
         } catch (Exception e) {
-            LOGGER.log(Level.SEVERE, "Error general en la consulta del activo {0}", e);
-            activosResponseDto.setResult(new ResultDto(ConstantesAplicacion.ERROR_CODE, "Error general en la consulta del activo "));
+            LOGGER.error( "Error general en la consulta del activo " + e);
+            activosResponseDto.setResult(new ResultDto(ConstantesAplicacion.ERROR_CODE, i18n.getMessage("mensaje_consulta_error_general") + " " + e.getMessage() )); 
         }
 
         return activosResponseDto;
@@ -131,29 +140,29 @@ public class ActivosBean implements ActivosBeanLocal {
 
         try {
             /* Se realiza la consulta de todos los activos */
-            LOGGER.log(Level.INFO, "Se realiza consulta de activos por tipo");
+            LOGGER.info( "Se realiza consulta de activos por tipo"); 
             Query q = em.createNamedQuery("ActivoFijo.findByTipo", ActivoFijo.class)
                     .setParameter("idTipo", tipo);
 
             List<ActivoFijo> activosList = q.getResultList();
 
-            LOGGER.log(Level.INFO, "Registros consultados: {0}", activosList.size());
+            LOGGER.info( "Registros consultados: " + activosList.size()); 
 
             if (activosList.size() > 0) {
                 /* Se llena Dto de respuesta */
                 activosResponseDto.setActivo(activosList);
-                activosResponseDto.setResult(new ResultDto(ConstantesAplicacion.SUCESS_CODE, "Consulta realizada correctamente"));
+                activosResponseDto.setResult(new ResultDto(ConstantesAplicacion.SUCESS_CODE, i18n.getMessage("mensaje_consulta_exitosa")));
             } else {
-                activosResponseDto.setResult(new ResultDto(ConstantesAplicacion.NO_RESULT_CODE, "No se generaron resultados"));
+                activosResponseDto.setResult(new ResultDto(ConstantesAplicacion.NO_RESULT_CODE, i18n.getMessage("mensaje_consulta_no_resultados")));
             }
 
         } catch (NoResultException e) {
-            LOGGER.log(Level.INFO, "No existen activos {0}", e);
-            activosResponseDto.setResult(new ResultDto(ConstantesAplicacion.NO_RESULT_CODE, "No se generaron resultados"));
+            LOGGER.info( "No existen activos " + e); 
+            activosResponseDto.setResult(new ResultDto(ConstantesAplicacion.NO_RESULT_CODE, i18n.getMessage("mensaje_consulta_no_resultados")));
 
         } catch (Exception e) {
-            LOGGER.log(Level.SEVERE, "Error general en la consulta del activo {0}", e);
-            activosResponseDto.setResult(new ResultDto(ConstantesAplicacion.ERROR_CODE, "Error general en la consulta del activo " + e.getMessage()));
+            LOGGER.error( "Error general en la consulta del activo " + e); 
+            activosResponseDto.setResult(new ResultDto(ConstantesAplicacion.ERROR_CODE, i18n.getMessage("mensaje_consulta_error_general") + " " + e.getMessage())); 
         }
 
         return activosResponseDto;
@@ -171,30 +180,30 @@ public class ActivosBean implements ActivosBeanLocal {
 
         try {
             /* Se realiza la consulta de todos los activos */
-            LOGGER.log(Level.INFO, "Se realiza consulta de activos por fecha de compra");
+            LOGGER.info("Se realiza consulta de activos por fecha de compra");
             Query q = em.createNamedQuery("ActivoFijo.findByFechaCompra", ActivoFijo.class)
                     .setParameter("fechaCompra", fechaCompra);
 
             List<ActivoFijo> activosList = q.getResultList();
 
-            LOGGER.log(Level.INFO, "Registros consultados: {0}", activosList.size());
+            LOGGER.info("Registros consultados: " + activosList.size()); 
 
             if (activosList.size() > 0) {
                 /* Se llena Dto de respuesta */
                 activosResponseDto.setActivo(activosList);
-                activosResponseDto.setResult(new ResultDto(ConstantesAplicacion.SUCESS_CODE, "Consulta realizada correctamente"));
+                activosResponseDto.setResult(new ResultDto(ConstantesAplicacion.SUCESS_CODE, i18n.getMessage("mensaje_consulta_exitosa")));
             } else {
-                activosResponseDto.setResult(new ResultDto(ConstantesAplicacion.NO_RESULT_CODE, "No se generaron resultados"));
+                activosResponseDto.setResult(new ResultDto(ConstantesAplicacion.NO_RESULT_CODE, i18n.getMessage("mensaje_consulta_no_resultados")));
             }
 
         } catch (NoResultException e) {
-            LOGGER.log(Level.INFO, "No existen activos {0}", e);
-            activosResponseDto.setResult(new ResultDto(ConstantesAplicacion.NO_RESULT_CODE, "No se generaron resultados"));
+            LOGGER.info("No existen activos " + e); 
+            activosResponseDto.setResult(new ResultDto(ConstantesAplicacion.NO_RESULT_CODE, i18n.getMessage("mensaje_consulta_no_resultados")));
 
         } catch (Exception e) {
-            LOGGER.log(Level.SEVERE, "Error general en la consulta del activo {0}", e);
-            activosResponseDto.setResult(new ResultDto(ConstantesAplicacion.ERROR_CODE, "Error general en la consulta del activo "));
-        }
+            LOGGER.error("Error general en la consulta del activo " + e);
+            activosResponseDto.setResult(new ResultDto(ConstantesAplicacion.ERROR_CODE, i18n.getMessage("mensaje_consulta_error_general") + " " + e.getMessage())); 
+        } 
 
         return activosResponseDto;
     }
@@ -226,10 +235,10 @@ public class ActivosBean implements ActivosBeanLocal {
 
             return tipo;
         } catch (NoResultException e) {
-            LOGGER.log(Level.INFO, "Tipo no encontrado {0}", e);
+            LOGGER.info("Tipo no encontrado " + e); 
 
         } catch (Exception e) {
-            LOGGER.log(Level.SEVERE, "Error general en la consulta de tipo {0}", e);
+            LOGGER.info("Tipo no encontrado " + e); 
         }
 
         return null;
@@ -251,10 +260,10 @@ public class ActivosBean implements ActivosBeanLocal {
 
             return estadoActual;
         } catch (NoResultException e) {
-            LOGGER.log(Level.INFO, "Estado no encontrado {0}", e);
+            LOGGER.info("Estado no encontrado " + e); 
 
         } catch (Exception e) {
-            LOGGER.log(Level.SEVERE, "Error general en la consulta del estado {0}", e);
+            LOGGER.error("Error general en la consulta del estado " + e); 
         }
 
         return null;
@@ -294,27 +303,27 @@ public class ActivosBean implements ActivosBeanLocal {
 
         try {
             /* Se realiza la consulta de todos los activos */
-            LOGGER.log(Level.INFO, "Se realiza consulta de areas");
+            LOGGER.info( "Se realiza consulta de areas");
             Query q = em.createNamedQuery("Area.findAll", Area.class);
 
             List<Area> areasList = q.getResultList();
 
-            LOGGER.log(Level.INFO, "Registros consultados: {0}", areasList.size());
+            LOGGER.info( "Registros consultados: {0}", areasList.size());
 
             if (areasList.size() > 0) {
                 /* Se llena Dto de respuesta */
                 areasResponseDto.setActivo(areasList);
-                areasResponseDto.setResult(new ResultDto(ConstantesAplicacion.SUCESS_CODE, "Consulta realizada correctamente"));
+                areasResponseDto.setResult(new ResultDto(ConstantesAplicacion.SUCESS_CODE, i18n.getMessage("mensaje_consulta_exitosa")));
             } else {
-                areasResponseDto.setResult(new ResultDto(ConstantesAplicacion.NO_RESULT_CODE, "No se generaron resultados"));
+                areasResponseDto.setResult(new ResultDto(ConstantesAplicacion.NO_RESULT_CODE, i18n.getMessage("mensaje_consulta_no_resultados"))); 
             }
         } catch (NoResultException e) {
-            LOGGER.log(Level.INFO, "No existen activos {0}", e);
-            areasResponseDto.setResult(new ResultDto(ConstantesAplicacion.NO_RESULT_CODE, "No se generaron resultados"));
+            LOGGER.info( "No existen activos {0}", e);
+            areasResponseDto.setResult(new ResultDto(ConstantesAplicacion.NO_RESULT_CODE, i18n.getMessage("mensaje_consulta_no_resultados")));
 
         } catch (Exception e) {
-            LOGGER.log(Level.SEVERE, "Error general en la consulta del activo {0}", e);
-            areasResponseDto.setResult(new ResultDto(ConstantesAplicacion.ERROR_CODE, "Error general en la consulta del activo "));
+            LOGGER.error( "Error general en la consulta del activo {0}", e);
+            areasResponseDto.setResult(new ResultDto(ConstantesAplicacion.ERROR_CODE, i18n.getMessage("mensaje_consulta_error_general") + " " + e.getMessage())); 
         }
 
         return areasResponseDto;
@@ -333,30 +342,54 @@ public class ActivosBean implements ActivosBeanLocal {
 
         try {
             /* Se realiza la consulta de todos los activos */
-            LOGGER.log(Level.INFO, "Se realiza consulta de personas");
+            LOGGER.info( "Se realiza consulta de personas");
             Query q = em.createNamedQuery("Persona.findAll", Persona.class);
 
             List<Persona> personasList = q.getResultList();
 
-            LOGGER.log(Level.INFO, "Registros consultados: {0}", personasList.size());
+            LOGGER.info( "Registros consultados: {0}", personasList.size());
 
             if (personasList.size() > 0) {
                 /* Se llena Dto de respuesta */
                 personasResponseDto.setActivo(personasList);
-                personasResponseDto.setResult(new ResultDto(ConstantesAplicacion.SUCESS_CODE, "Consulta realizada correctamente"));
+                personasResponseDto.setResult(new ResultDto(ConstantesAplicacion.SUCESS_CODE, i18n.getMessage("mensaje_consulta_exitosa")));
             } else {
-                personasResponseDto.setResult(new ResultDto(ConstantesAplicacion.NO_RESULT_CODE, "No se generaron resultados"));
+                personasResponseDto.setResult(new ResultDto(ConstantesAplicacion.NO_RESULT_CODE, i18n.getMessage("mensaje_consulta_no_resultados"))); 
             }
         } catch (NoResultException e) {
-            LOGGER.log(Level.INFO, "No existen activos {0}", e);
-            personasResponseDto.setResult(new ResultDto(ConstantesAplicacion.NO_RESULT_CODE, "No se generaron resultados"));
+            LOGGER.info( "No existen activos {0}", e);
+            personasResponseDto.setResult(new ResultDto(ConstantesAplicacion.NO_RESULT_CODE, i18n.getMessage("mensaje_consulta_no_resultados")));
 
         } catch (Exception e) {
-            LOGGER.log(Level.SEVERE, "Error general en la consulta del activo {0}", e);
-            personasResponseDto.setResult(new ResultDto(ConstantesAplicacion.ERROR_CODE, "Error general en la consulta del activo "));
+            LOGGER.error( "Error general en la consulta del activo {0}", e);
+            personasResponseDto.setResult(new ResultDto(ConstantesAplicacion.ERROR_CODE, i18n.getMessage("mensaje_consulta_error_general") + " " + e.getMessage()));
         }
 
         return personasResponseDto;
+    }
+
+    
+    /**
+     * Implementacion de funcion que crea un registro en la tipo activos
+     * fijos
+     *
+     * @param tipo
+     */
+    @Override
+    public void crearTipo(Tipo tipo) {
+        em.persist(tipo);
+    }
+    
+    
+    /**
+     * Implementacion de funcion que crea un registro en la estado activos
+     * fijos
+     *
+     * @param estadoActual
+     */
+    @Override
+    public void crearEstadoActual(EstadoActual estadoActual) {
+        em.persist(estadoActual);
     }
 
     

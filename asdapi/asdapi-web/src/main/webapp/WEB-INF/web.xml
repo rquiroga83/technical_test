@@ -16,11 +16,11 @@
     <data-source>
         <name>java:global/JPAAsdActivosDs</name>
         <class-name>com.mysql.jdbc.jdbc2.optional.MysqlXADataSource</class-name>
-        <server-name>localhost</server-name>
+        <server-name>${server.name}</server-name>
         <port-number>3306</port-number>
-        <database-name>asdapi</database-name>
-        <user>root</user>
-        <password>root</password>
+        <database-name>${server.database}</database-name>
+        <user>${server.user}</user>
+        <password>${server.pwd}</password>
         <!-- Example of how to use a Payara specific custom connection pool setting -->
         <property>
             <name>fish.payara.sql-trace-listeners</name>
@@ -29,12 +29,21 @@
     </data-source>
  
     <servlet>
-        <servlet-name>Jersey Web Application</servlet-name>
-        <servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>
+        <servlet-name>jersey</servlet-name>
+        <!--<servlet-class>com.sun.jersey.spi.container.servlet.ServletContainer</servlet-class>-->
+        <servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
+        <init-param>
+            <param-name>jersey.config.server.provider.packages</param-name>
+            <param-value>
+                io.swagger.v3.jaxrs2.integration.resources,com.asd.api.rest.activos.servicios,com.asd.api.filter.authentication
+            </param-value>
+        </init-param>
         <load-on-startup>1</load-on-startup>
     </servlet>
+   
+    
     <servlet-mapping>
-        <servlet-name>Jersey Web Application</servlet-name>
+        <servlet-name>jersey</servlet-name>
         <url-pattern>/services/*</url-pattern>
     </servlet-mapping>
 </web-app>

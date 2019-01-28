@@ -1,0 +1,11 @@
+com.asd.api.anotations
+com.asd.api.common.activos.constantes
+com.asd.api.common.activos.dto
+com.asd.api.ejb.activos
+com.asd.api.ejb.activos.impl
+com.asd.api.ejb.i18n
+com.asd.api.ejb.i18n.imlp
+com.asd.api.filter.authentication
+com.asd.api.persistencia.constantes
+com.asd.api.persistencia.entidades
+com.asd.api.rest.activos.servicios

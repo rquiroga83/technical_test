@@ -45,8 +45,8 @@ public class Ciudad implements Serializable {
     @Size(min = 1, max = 100)
     @Column(name = "nombre")
     private String nombre;
-    @OneToMany(cascade = CascadeType.ALL, mappedBy = "ciudadId")
-    private Collection<Area> areaCollection;
+    /*@OneToMany(cascade = CascadeType.ALL, mappedBy = "ciudadId")
+    private Collection<Area> areaCollection;*/
 
     public Ciudad() {
     }
@@ -75,7 +75,7 @@ public class Ciudad implements Serializable {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-
+    /*
     @XmlTransient
     public Collection<Area> getAreaCollection() {
         return areaCollection;
@@ -84,6 +84,7 @@ public class Ciudad implements Serializable {
     public void setAreaCollection(Collection<Area> areaCollection) {
         this.areaCollection = areaCollection;
     }
+*/
 
     @Override
     public int hashCode() {

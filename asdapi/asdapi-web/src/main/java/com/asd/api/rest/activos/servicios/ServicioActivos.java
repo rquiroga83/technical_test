@@ -5,6 +5,7 @@
  */
 package com.asd.api.rest.activos.servicios;
 
+import com.asd.api.anotations.Secured;
 import com.asd.api.common.activos.constantes.ConstantesAplicacion;
 import com.asd.api.common.activos.dto.ActivosResponseDto;
 import com.asd.api.common.activos.dto.AreasResponseDto;
@@ -14,11 +15,13 @@ import com.asd.api.ejb.activos.ActivosBeanLocal;
 import com.asd.api.persistencia.entidades.ActivoFijo;
 import com.asd.api.persistencia.entidades.EstadoActual;
 import com.asd.api.persistencia.entidades.Tipo;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.media.Content;
+import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.ejb.EJB;
 import javax.ejb.EJBException;
 import javax.enterprise.context.RequestScoped;
@@ -33,6 +36,7 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.MediaType;
+import org.slf4j.LoggerFactory; 
 
 /**
  * Clase que implementa front de servicios web
@@ -41,10 +45,12 @@ import javax.ws.rs.core.MediaType;
  * @version 1.0
  */
 @Path("servicioActivos")
+@Produces(MediaType.APPLICATION_JSON)
 @RequestScoped
 public class ServicioActivos {
 
-    private static final Logger LOGGER = Logger.getLogger(ServicioActivos.class.getName());
+    //private static final Logger LOGGER = Logger.getLogger(ServicioActivos.class.getName()); 
+    private final org.slf4j.Logger LOGGER = LoggerFactory.getLogger(ServicioActivos.class); 
 
     @Context
     private HttpServletResponse httpServletResponse;
@@ -85,7 +91,7 @@ public class ServicioActivos {
         try {
             httpServletResponse.flushBuffer();
         } catch (Exception e) {
-            LOGGER.log(Level.SEVERE, "Error al establecer repuesta {0}", e);
+            LOGGER.error( "Error al establecer repuesta {0}", e);
         }
     }
 
@@ -97,6 +103,18 @@ public class ServicioActivos {
     @Path("/obtenerActivosFijos")
     @GET
     @Produces({MediaType.APPLICATION_JSON})
+    @Operation(summary = "Obtiene todos los activos",
+    tags = {"activos"},
+    description = "Retorna la totalidad de activos de la base de datos",
+    responses = {
+            @ApiResponse(description = "Lista de activos", content = @Content(
+                    schema = @Schema(implementation = ActivosResponseDto.class)
+            )),
+            @ApiResponse(responseCode = "200", description = "Consulta exitosa"),
+            @ApiResponse(responseCode = "400", description = "Datos faltantes"),
+            @ApiResponse(responseCode = "404", description = "Busqueda sin resultados"),
+            @ApiResponse(responseCode = "500", description = "Errores en el backend")
+    })
     public ActivosResponseDto obtenerActivos() {
 
         establecerCabeceras();
@@ -115,6 +133,18 @@ public class ServicioActivos {
     @Path("/obtenerActivosFijosSerial")
     @GET
     @Produces({MediaType.APPLICATION_JSON})
+    @Operation(summary = "Retorna activos por nuero de serial",
+    tags = {"activos"},
+    description = "Retorna activos por nuero de serial",
+    responses = {
+            @ApiResponse(description = "Lista de activos", content = @Content(
+                    schema = @Schema(implementation = ActivosResponseDto.class)
+            )),
+            @ApiResponse(responseCode = "200", description = "Consulta exitosa"),
+            @ApiResponse(responseCode = "400", description = "Datos faltantes"),
+            @ApiResponse(responseCode = "404", description = "Busqueda sin resultados"),
+            @ApiResponse(responseCode = "500", description = "Errores en el backend")
+    })
     public ActivosResponseDto obtenerActivosSerial(@QueryParam("serial") String serial) {
 
         establecerCabeceras();
@@ -133,6 +163,18 @@ public class ServicioActivos {
     @Path("/obtenerActivosFijosIdTipo")
     @GET
     @Produces({MediaType.APPLICATION_JSON})
+    @Operation(summary = "Retorna activos por tipo",
+    tags = {"activos"},
+    description = "Retorna activos por tipo",
+    responses = {
+            @ApiResponse(description = "Lista de activos", content = @Content(
+                    schema = @Schema(implementation = ActivosResponseDto.class)
+            )),
+            @ApiResponse(responseCode = "200", description = "Consulta exitosa"),
+            @ApiResponse(responseCode = "400", description = "Datos faltantes"),
+            @ApiResponse(responseCode = "404", description = "Busqueda sin resultados"),
+            @ApiResponse(responseCode = "500", description = "Errores en el backend")
+    })
     public ActivosResponseDto obtenerActivosIdTipo(@QueryParam("idTipo") Integer idTipo) {
 
         establecerCabeceras();
@@ -151,6 +193,18 @@ public class ServicioActivos {
     @Path("/obtenerActivosFijosFechaCompra")
     @GET
     @Produces({MediaType.APPLICATION_JSON})
+    @Operation(summary = "Retorna activos por fecha de compra",
+    tags = {"activos"},
+    description = "Retorna activos por fecha de compra",
+    responses = {
+            @ApiResponse(description = "Lista de activos", content = @Content(
+                    schema = @Schema(implementation = ActivosResponseDto.class)
+            )),
+            @ApiResponse(responseCode = "200", description = "Consulta exitosa"),
+            @ApiResponse(responseCode = "400", description = "Datos faltantes"),
+            @ApiResponse(responseCode = "404", description = "Busqueda sin resultados"),
+            @ApiResponse(responseCode = "500", description = "Errores en el backend")
+    })
     public ActivosResponseDto obtenerActivosFechaCompra(@QueryParam("fechaCompra") String fechaCompra) {
 
         establecerCabeceras();
@@ -191,6 +245,18 @@ public class ServicioActivos {
     @Path("/crearActivoFijo")
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
+    @Operation(summary = "Crea activos",
+    tags = {"activos"},
+    description = "Crea activos",
+    responses = {
+            @ApiResponse(description = "Resultado de la operacion", content = @Content(
+                    schema = @Schema(implementation = ActivosResponseDto.class)
+            )),
+            @ApiResponse(responseCode = "200", description = "Consulta exitosa"),
+            @ApiResponse(responseCode = "400", description = "Datos faltantes"),
+            @ApiResponse(responseCode = "404", description = "Busqueda sin resultados"),
+            @ApiResponse(responseCode = "500", description = "Errores en el backend")
+    })
     public ActivosResponseDto crearActivoFijo(@FormParam("nombre") String nombre,
             @FormParam("descripcion") String descripcion,
             @FormParam("serial") String serial,
@@ -274,14 +340,14 @@ public class ServicioActivos {
             estableceRespuesta(ConstantesAplicacion.MISSING_DATA_CODE);
             return activosResponseDto;
         } catch (ConstraintViolationException ev) {
-            LOGGER.log(Level.SEVERE, "Error en parametros enviados parametros imcompletos {0}", ev);
+            LOGGER.error("Error en parametros enviados parametros imcompletos " + ev); 
             ActivosResponseDto activosResponseDto = new ActivosResponseDto();
             activosResponseDto.setResult(new ResultDto(ConstantesAplicacion.MISSING_DATA_CODE, "Error en parametros enviados parametros imcompletos " + ev.getMessage()));
             estableceRespuesta(ConstantesAplicacion.MISSING_DATA_CODE);
             return activosResponseDto;
 
         } catch (Exception e) {
-            LOGGER.log(Level.SEVERE, "Error general el almacenamiento del activo {0}", e);
+            LOGGER.error("Error general el almacenamiento del activo " + e); 
             ActivosResponseDto activosResponseDto = new ActivosResponseDto();
             activosResponseDto.setResult(new ResultDto(ConstantesAplicacion.MISSING_DATA_CODE, "Error general el almacenamiento del activo " + e.getMessage()));
             estableceRespuesta(ConstantesAplicacion.MISSING_DATA_CODE);
@@ -299,9 +365,22 @@ public class ServicioActivos {
      * @return
      */
     @POST
+    @Secured
     @Path("/actualizarActivoFijo")
     @Produces(MediaType.APPLICATION_JSON)
     @Consumes(MediaType.APPLICATION_FORM_URLENCODED)
+    @Operation(summary = "Actuliza el serial y fecha de baja",
+    tags = {"activos"},
+    description = "Actuliza el serial y fecha de baja",
+    responses = {
+            @ApiResponse(description = "Resultado de la operacion", content = @Content(
+                    schema = @Schema(implementation = ActivosResponseDto.class)
+            )),
+            @ApiResponse(responseCode = "200", description = "Consulta exitosa"),
+            @ApiResponse(responseCode = "400", description = "Datos faltantes"),
+            @ApiResponse(responseCode = "404", description = "Busqueda sin resultados"),
+            @ApiResponse(responseCode = "500", description = "Errores en el backend")
+    })
     public ActivosResponseDto actualizarActivoFijo(@FormParam("id") Integer id,
             @FormParam("numero_interno_inventario") String numero_interno_inventario,
             @FormParam("fecha_baja") String fechaBaja,
@@ -340,13 +419,13 @@ public class ServicioActivos {
             estableceRespuesta(ConstantesAplicacion.MISSING_DATA_CODE);
             return activosResponseDto;
         } catch (EJBException ev) {
-            LOGGER.log(Level.SEVERE, "Error en parametros enviados parametros imcompletos {0}", ev);
+            LOGGER.error("Error en parametros enviados parametros imcompletos " + ev); 
             ActivosResponseDto activosResponseDto = new ActivosResponseDto();
             activosResponseDto.setResult(new ResultDto(ConstantesAplicacion.MISSING_DATA_CODE, "Error en parametros enviados parametros imcompletos " + ev.getMessage()));
             estableceRespuesta(ConstantesAplicacion.MISSING_DATA_CODE);
             return activosResponseDto;
         } catch (Exception e) {
-            LOGGER.log(Level.SEVERE, "Error general el almacenamiento del activo {0}", e);
+            LOGGER.error( "Error general el almacenamiento del activo " + e); 
             ActivosResponseDto activosResponseDto = new ActivosResponseDto();
             activosResponseDto.setResult(new ResultDto(ConstantesAplicacion.MISSING_DATA_CODE, "Error general el almacenamiento del activo " + e.getMessage()));
             estableceRespuesta(ConstantesAplicacion.MISSING_DATA_CODE);
@@ -364,6 +443,18 @@ public class ServicioActivos {
     @Path("/obtenerAreas")
     @GET
     @Produces({MediaType.APPLICATION_JSON})
+    @Operation(summary = "Obtiene todas las areas",
+    tags = {"areas"},
+    description = "Obtiene todas las areas",
+    responses = {
+            @ApiResponse(description = "Listado de areas", content = @Content(
+                    schema = @Schema(implementation = AreasResponseDto.class)
+            )),
+            @ApiResponse(responseCode = "200", description = "Consulta exitosa"),
+            @ApiResponse(responseCode = "400", description = "Datos faltantes"),
+            @ApiResponse(responseCode = "404", description = "Busqueda sin resultados"),
+            @ApiResponse(responseCode = "500", description = "Errores en el backend")
+    })
     public AreasResponseDto obtenerAreas() {
 
         establecerCabeceras();
@@ -381,7 +472,20 @@ public class ServicioActivos {
      */
     @Path("/obtenerPersonas")
     @GET
+    @Secured
     @Produces({MediaType.APPLICATION_JSON})
+    @Operation(summary = "Obtiene todas las personas",
+    tags = {"areas"},
+    description = "Obtiene todas las personas",
+    responses = {
+            @ApiResponse(description = "Listado de areas", content = @Content(
+                    schema = @Schema(implementation = PersonasResponseDto.class)
+            )),
+            @ApiResponse(responseCode = "200", description = "Consulta exitosa"),
+            @ApiResponse(responseCode = "400", description = "Datos faltantes"),
+            @ApiResponse(responseCode = "404", description = "Busqueda sin resultados"),
+            @ApiResponse(responseCode = "500", description = "Errores en el backend")
+    })
     public PersonasResponseDto obtenerPersonas() {
 
         establecerCabeceras();

@@ -28,4 +28,13 @@ public class ConstantesAplicacion {
     public static final int NO_RESULT_CODE = 404;
     public static final int MISSING_DATA_CODE = 400;
  
+    
+    /** 
+     * Contantes de internacionalizacion 
+     */ 
+    //public static final String LANGUAJE = "es"; 
+    //public static final String COUNTRY = "CO"; 
+     
+    public static final String LANGUAJE = "en"; 
+    public static final String COUNTRY = "US"; 
 }
